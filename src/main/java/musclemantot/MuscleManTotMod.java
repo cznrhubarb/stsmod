@@ -4,8 +4,10 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
+import musclemantot.relics.BaseRelic;
 import musclemantot.util.GeneralUtils;
 import musclemantot.util.KeywordInfo;
 import musclemantot.util.TextureLoader;
@@ -33,6 +35,7 @@ import java.util.Set;
 public class MuscleManTotMod implements
         EditCharactersSubscriber,
         EditCardsSubscriber,
+        EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         PostInitializeSubscriber {
@@ -151,6 +154,24 @@ public class MuscleManTotMod implements
                 .packageFilter(BaseCard.class)
                 .setDefaultSeen(true)
                 .cards();
+    }
+    @Override
+    public void receiveEditRelics() {
+        new AutoAdd(modID)
+                .packageFilter(BaseRelic.class)
+                .any(BaseRelic.class, (info, relic) -> {
+                  if (relic.pool != null) {
+                      BaseMod.addRelicToCustomPool(relic, relic.pool);
+                  } else {
+                      BaseMod.addRelic(relic, relic.relicType);
+                  }
+
+                    //If the class is annotated with @AutoAdd.Seen, it will be marked as seen, making it visible in the relic library.
+                    //If you want all your relics to be visible by default, just remove this if statement.
+//                  if (info.seen) {
+//                      UnlockTracker.markRelicAsSeen(relic.relicId);
+//                  }
+                });
     }
 
     @Override

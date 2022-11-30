@@ -15,7 +15,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 
 public class Scratch extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "Scratch",
+            Scratch.class.getSimpleName(),
             1,
             CardType.ATTACK,
             CardTarget.ENEMY,
@@ -28,19 +28,14 @@ public class Scratch extends BaseCard {
     private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK = 2;
-
     public Scratch() {
         super(cardInfo);
 
         setDamage(DAMAGE, UPG_DAMAGE);
-        setBlock(BLOCK, UPG_BLOCK);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, block));
         addToBot(
             new DamageAction(
                 m,

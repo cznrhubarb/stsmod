@@ -1,8 +1,7 @@
-package musclemantot.cards.skill;
+package musclemantot.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,34 +12,39 @@ import musclemantot.util.CardInfo;
 
 import static musclemantot.MuscleManTotMod.makeID;
 
-public class Defend_Brown extends BaseCard {
+public class GnawingBite extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
-            Defend_Brown.class.getSimpleName(),
+            GnawingBite.class.getSimpleName(),
             1,
-            CardType.SKILL,
-            CardTarget.SELF,
-            CardRarity.BASIC,
+            CardType.ATTACK,
+            CardTarget.ENEMY,
+            CardRarity.COMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK = 3;
+    private static final int DAMAGE = 5;
+    private static final int UPG_DAMAGE = 2;
 
-    public Defend_Brown() {
+    public GnawingBite() {
         super(cardInfo);
 
-        setBlock(BLOCK, UPG_BLOCK);
+        setDamage(DAMAGE, UPG_DAMAGE);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, block));
+        addToBot(
+            new DamageAction(
+                m,
+                new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL)
+        );
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new Defend_Brown();
+        return new GnawingBite();
     }
 }

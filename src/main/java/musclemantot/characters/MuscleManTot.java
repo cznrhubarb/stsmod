@@ -23,8 +23,11 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.BurningBlood;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import musclemantot.cards.attack.Strike_Brown;
+import musclemantot.cards.attack.Vomit;
 import musclemantot.cards.power.PleasantDemeanor;
 import musclemantot.cards.skill.Defend_Brown;
+import musclemantot.cards.skill.StuffFace;
+import musclemantot.relics.HalfEatenGourmetBagel;
 
 import java.util.ArrayList;
 
@@ -86,9 +89,18 @@ public class MuscleManTot extends CustomPlayer {
         //If you want multiple of the same card, you have to add it multiple times.
         retVal.add(Strike_Brown.ID);
         retVal.add(Strike_Brown.ID);
+        retVal.add(Strike_Brown.ID);
+        retVal.add(Strike_Brown.ID);
+        retVal.add(Strike_Brown.ID);
+
         retVal.add(Defend_Brown.ID);
         retVal.add(Defend_Brown.ID);
-        retVal.add(PleasantDemeanor.ID);
+        retVal.add(Defend_Brown.ID);
+        retVal.add(Defend_Brown.ID);
+        retVal.add(Defend_Brown.ID);
+
+        retVal.add(Vomit.ID);
+        retVal.add(StuffFace.ID);
 
         return retVal;
     }
@@ -97,7 +109,7 @@ public class MuscleManTot extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
-        retVal.add(BurningBlood.ID);
+        retVal.add(HalfEatenGourmetBagel.ID);
 
         return retVal;
     }

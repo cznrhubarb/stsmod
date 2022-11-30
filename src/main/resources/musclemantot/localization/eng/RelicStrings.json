@@ -5,5 +5,47 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. [E] is an energy icon."
     ]
+  },
+  "${modID}:HalfEatenGourmetBagel": {
+    "NAME": "Half Eaten Gourmet Bagel",
+    "FLAVOR": "It was a gift from Amy's coworkers.",
+    "DESCRIPTIONS": [
+      "Start each combat with 1 *Binge."
+    ]
+  },
+  "${modID}:BoxOfHalfEatenGourmetBagels": {
+    "NAME": "Box Of Half Eaten Gourmet Bagels",
+    "FLAVOR": "OH MY GOD HE'S GOTTEN INTO THE WHOLE BOX",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+  "${modID}:CatnipBanana": {
+    "NAME": "Catnip Banana",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+  "${modID}:AutomaticFeeder": {
+    "NAME": "Automatic Feeder",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+  "${modID}:CatHammock": {
+    "NAME": "Cat Hammock",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+  "${modID}:Prozac": {
+    "NAME": "Prozac",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      ""
+    ]
   }
 }

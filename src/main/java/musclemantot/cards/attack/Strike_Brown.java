@@ -15,7 +15,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 
 public class Strike_Brown extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "Strike_Brown",
+            Strike_Brown.class.getSimpleName(),
             1,
             CardType.ATTACK,
             CardTarget.ENEMY,

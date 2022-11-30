@@ -14,7 +14,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 
 public class PleasantDemeanor extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "PleasantDemeanor",
+            PleasantDemeanor.class.getSimpleName(),
             1,
             CardType.POWER,
             CardTarget.SELF,
