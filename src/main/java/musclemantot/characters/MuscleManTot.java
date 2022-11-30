@@ -22,6 +22,9 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.BurningBlood;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import musclemantot.cards.attack.Strike_Brown;
+import musclemantot.cards.power.PleasantDemeanor;
+import musclemantot.cards.skill.Defend_Brown;
 
 import java.util.ArrayList;
 
@@ -81,11 +84,11 @@ public class MuscleManTot extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         //List of IDs of cards for your starting deck.
         //If you want multiple of the same card, you have to add it multiple times.
-        retVal.add(Strike_Red.ID);
-        retVal.add(Strike_Red.ID);
-        retVal.add(Defend_Blue.ID);
-        retVal.add(Defend_Blue.ID);
-        retVal.add(Neutralize.ID);
+        retVal.add(Strike_Brown.ID);
+        retVal.add(Strike_Brown.ID);
+        retVal.add(Defend_Brown.ID);
+        retVal.add(Defend_Brown.ID);
+        retVal.add(PleasantDemeanor.ID);
 
         return retVal;
     }
