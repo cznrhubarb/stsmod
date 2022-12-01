@@ -1,8 +1,8 @@
 {
-  "${modID}:PowerID": {
-    "NAME": "Ultimate Power",
+  "${modID}:Binge": {
+    "NAME": "Binge",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "You are full."
     ]
   }
 }

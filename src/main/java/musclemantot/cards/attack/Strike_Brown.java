@@ -31,6 +31,8 @@ public class Strike_Brown extends BaseCard {
     public Strike_Brown() {
         super(cardInfo);
 
+        tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STARTER_STRIKE);
         setDamage(DAMAGE, UPG_DAMAGE);
     }
 

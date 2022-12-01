@@ -31,6 +31,7 @@ public class Defend_Brown extends BaseCard {
     public Defend_Brown() {
         super(cardInfo);
 
+        tags.add(CardTags.STARTER_DEFEND);
         setBlock(BLOCK, UPG_BLOCK);
     }
 

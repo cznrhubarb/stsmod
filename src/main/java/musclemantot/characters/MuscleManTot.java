@@ -43,7 +43,7 @@ public class MuscleManTot extends CustomPlayer {
     public static final int ORB_SLOTS = 0;
 
     //Strings
-    private static final String ID = makeID("MuscleManTot"); //This should match whatever you have in the CharacterStrings.json file
+    private static final String ID = makeID(MuscleManTot.class.getSimpleName()); //This should match whatever you have in the CharacterStrings.json file
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
