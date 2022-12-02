@@ -28,11 +28,12 @@ public class PurroteinPowder extends BaseCard {
         super(cardInfo);
 
         setInnate(false, true);
+        setMagic(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new PurroteinPowderPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new PurroteinPowderPower(p, magicNumber)));
     }
 
     @Override

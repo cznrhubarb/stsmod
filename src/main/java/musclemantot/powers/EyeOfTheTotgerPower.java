@@ -15,6 +15,7 @@ public class EyeOfTheTotgerPower extends BasePower implements CloneablePowerInte
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
+    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

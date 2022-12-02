@@ -78,7 +78,43 @@
   //power cards
   "${modID}:PleasantDemeanor": {
     "NAME": "Pleasant Demeanor",
-    "DESCRIPTION": "Enemies gain 1 *Weak when dealing damage to you.",
-    "UPGRADE_DESCRIPTION": "*Innate. NL Enemies gain 1 *Weak when dealing damage to you."
+    "DESCRIPTION": "Enemies gain !M! Weak after attacking.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enemies gain !M! Weak after attacking."
+  },
+  "${modID}:EyeOfTheTotger": {
+    "NAME": "Eye Of The Totger",
+    "DESCRIPTION": "Gain !M! Block at the end of each turn for each musclemantot:Binge you have."
+  },
+  "${modID}:FallFromAmysGrace": {
+    "NAME": "Fall From Amy's Grace",
+    "DESCRIPTION": "Strength also increases amount of Poison inflicted."
+  },
+  "${modID}:FiveToeDiscount": {
+    "NAME": "Five Toe Discount",
+    "DESCRIPTION": "Ethereal. NL Gain [E] every time you musclemantot:Binge.",
+    "UPGRADE_DESCRIPTION": "Gain [E] every time you musclemantot:Binge."
+  },
+  "${modID}:GuzzleGut": {
+    "NAME": "Guzzle Gut",
+    "DESCRIPTION": "Apply !M! Poison to ALL enemies each time you musclemantot:Binge."
+  },
+  "${modID}:JawVice": {
+    "NAME": "Jaw Vice",
+    "DESCRIPTION": "Bite cards cost !M! less [E] to play.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Bite cards cost !M! less [E] to play."
+  },
+  "${modID}:LiquidLaugh": {
+    "NAME": "Liquid Laugh",
+    "DESCRIPTION": "Apply !M! Poison to ALL enemies each time you musclemantot:Purge."
+  },
+  "${modID}:LoafForm": {
+    "NAME": "Loaf Form",
+    "DESCRIPTION": "Ethereal. NL musclemantot:Binge !M! at the start of every turn.",
+    "UPGRADE_DESCRIPTION": "musclemantot:Binge !M! at the start of every turn."
+  },
+  "${modID}:PurroteinPowder": {
+    "NAME": "Purrotein Powder",
+    "DESCRIPTION": "Gain !M! Strength every time you musclemantot:Binge.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Strength every time you musclemantot:Binge."
   }
 }

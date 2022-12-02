@@ -3,7 +3,7 @@
 
     <properties>
         <modID>MuscleManTot</modID>
-        <author>Mike Arlington</author>
+        <author>Mike Arlington, Jen Pelham</author>
 
         <!-- Change this to match your Steam installation. -->
         <Steam.path>C:/Program Files (x86)/steam/steamapps</Steam.path>
@@ -22,7 +22,7 @@
     <version>0.0.1</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
-    <description>Tot's climbing the tower like he climbs the fridge in search of bagels.</description>
+    <description>Tot's climbing the Spire like he climbs the fridge in search of bagels.</description>
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->
     <!--You'll get a warning regarding these when you package your mod, but don't worry, it's just set up like this for convenience.-->
