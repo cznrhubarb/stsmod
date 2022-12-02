@@ -2,6 +2,7 @@ package musclemantot.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,8 +25,8 @@ public class ChewThrough extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 4;
 
     public ChewThrough() {
         super(cardInfo);
@@ -35,6 +36,8 @@ public class ChewThrough extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new RemoveAllBlockAction(m, p));
+
         addToBot(
             new DamageAction(
                 m,

@@ -25,7 +25,7 @@ public class Scratch extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 2;
 
     public Scratch() {
@@ -36,12 +36,14 @@ public class Scratch extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(
-            new DamageAction(
-                m,
-                new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL)
-        );
+        for (int i = 0; i < 2; i++) {
+            addToBot(
+                    new DamageAction(
+                            m,
+                            new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
+                            AbstractGameAction.AttackEffect.SLASH_VERTICAL)
+            );;
+        }
     }
 
     @Override

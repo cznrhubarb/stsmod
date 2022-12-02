@@ -24,7 +24,7 @@ public class Shred extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 3;
     private static final int UPG_DAMAGE = 2;
 
     public Shred() {
@@ -35,12 +35,14 @@ public class Shred extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(
-            new DamageAction(
-                m,
-                new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL)
-        );
+        for (int i = 0; i < 3; i++) {
+            addToBot(
+                    new DamageAction(
+                            m,
+                            new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
+                            AbstractGameAction.AttackEffect.SLASH_VERTICAL)
+            );;
+        }
     }
 
     @Override

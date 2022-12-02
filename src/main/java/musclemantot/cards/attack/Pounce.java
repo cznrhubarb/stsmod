@@ -2,6 +2,7 @@ package musclemantot.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,13 +25,16 @@ public class Pounce extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 8;
+    private static final int UPG_DAMAGE = 2;
+
+    private static final int DRAW = 1;
 
     public Pounce() {
         super(cardInfo);
 
         setDamage(DAMAGE, UPG_DAMAGE);
+        setMagic(DRAW);
     }
 
     @Override
@@ -41,6 +45,7 @@ public class Pounce extends BaseCard {
                 new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL)
         );
+        this.addToBot(new DrawCardAction(p, this.magicNumber));
     }
 
     @Override

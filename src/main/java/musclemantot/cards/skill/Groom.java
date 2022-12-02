@@ -1,5 +1,7 @@
 package musclemantot.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,12 +23,22 @@ public class Groom extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
+    private static final int DRAW = 5;
+
+    private static final int DISCARD = 5;
+
     public Groom() {
         super(cardInfo);
+
+        setMagic(DRAW);
+        setMagic(DISCARD);
+        setCostUpgrade(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new DrawCardAction(p, this.magicNumber));
+        this.addToBot(new DiscardAction(p, p, this.magicNumber, false));
     }
 
     @Override

@@ -9,14 +9,73 @@
       "Blizzard is a good example for this."
     ]
   },
+  //attack cards
   "${modID}:Strike_Brown": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${modID}:Vomit": {
+    "NAME": "Vomit",
+    "DESCRIPTION": "Purge X. NL Deal !D! damage X times."
+  },
+  "${modID}:Scratch": {
+    "NAME": "Scratch",
+    "DESCRIPTION": "Deal !D! damage twice."
+  },
+  "${modID}:Pounce": {
+    "NAME": "Pounce",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+  },
+  "${modID}:CrunchAndMunch": {
+    "NAME": "Crunch and Munch",
+    "DESCRIPTION": "Deal !D! damage. NL Binge !M! for each bite played this turn."
+  },
+  "${modID}:Kick": {
+    "NAME": "Kick",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:LoveBite": {
+    "NAME": "Love Bite",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "${modID}:FurryFuryFlurry": {
+    "NAME": "Furry Fury Flurry",
+    "DESCRIPTION": "Deal !D! damage X times."
+  },
+  "${modID}:Spray": {
+    "NAME": "Spray",
+    "DESCRIPTION": "Deal !D! damage X times. X equals an enemy's buffs and debuffs."
+  },
+  "${modID}:LitterSplash": {
+    "NAME": "Litter Splash",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Add !M! Slimed to your deck."
+  },
+  "${modID}:BowlOver": {
+    "NAME": "Bowl Over",
+    "DESCRIPTION": "Deal !D! damage to all enemies X times equal to your binge."
+  },
+  "${modID}:BatAround": {
+    "NAME": "Bat Around",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:Bully": {
+    "NAME": "Bully",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "${modID}:Spew": {
+    "NAME": "Spew",
+    "DESCRIPTION": "Purge X. Deal !D! damage. NL Apply !M! Poison to ALL enemies."
+  },
+  "${modID}:Puke": {
+    "NAME": "Puke",
+    "DESCRIPTION": "Purge X. Deal !D! damage. NL Apply !M! Poison X times."
+  },
+  //skill cards
   "${modID}:Defend_Brown": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  //power cards
   "${modID}:PleasantDemeanor": {
     "NAME": "Pleasant Demeanor",
     "DESCRIPTION": "Enemies gain 1 *Weak when dealing damage to you.",
