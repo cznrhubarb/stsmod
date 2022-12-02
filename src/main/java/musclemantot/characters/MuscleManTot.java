@@ -62,6 +62,9 @@ public class MuscleManTot extends CustomPlayer {
         public static AbstractCard.CardColor CARD_COLOR;
         @SpireEnum(name = "MUSCLE_MAN_TOT_BROWN_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+
+        @SpireEnum
+        public static AbstractCard.CardTags BITE;
     }
 
     public MuscleManTot() {

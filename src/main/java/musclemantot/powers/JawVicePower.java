@@ -7,12 +7,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static musclemantot.MuscleManTotMod.makeID;
 
 public class JawVicePower extends BasePower implements CloneablePowerInterface {
-    public static final String ID = makeID(JawVicePower.class.getSimpleName());
+    public static final String POWER_ID = makeID(JawVicePower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
     public JawVicePower(AbstractCreature owner, int amount) {
-        super(ID, TYPE, TURN_BASED, owner, amount);
+        super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
     public void updateDescription() {

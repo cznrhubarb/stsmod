@@ -30,6 +30,7 @@ public class GnawingBite extends BaseCard {
     public GnawingBite() {
         super(cardInfo);
 
+        tags.add(MuscleManTot.Enums.BITE);
         setDamage(DAMAGE, UPG_DAMAGE);
     }
 

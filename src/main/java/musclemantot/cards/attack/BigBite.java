@@ -30,6 +30,7 @@ public class BigBite extends BaseCard {
     public BigBite() {
         super(cardInfo);
 
+        tags.add(MuscleManTot.Enums.BITE);
         setDamage(DAMAGE, UPG_DAMAGE);
     }
 

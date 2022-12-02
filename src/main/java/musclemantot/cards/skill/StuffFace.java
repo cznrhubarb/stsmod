@@ -1,10 +1,12 @@
 package musclemantot.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
+import musclemantot.powers.BingePower;
 import musclemantot.util.CardInfo;
 
 import static musclemantot.MuscleManTotMod.makeID;
@@ -23,10 +25,13 @@ public class StuffFace extends BaseCard {
 
     public StuffFace() {
         super(cardInfo);
+
+        setCostUpgrade(0);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p, p, new BingePower(p, 1)));
     }
 
     @Override

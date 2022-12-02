@@ -30,6 +30,7 @@ public class ViciousBite extends BaseCard {
     public ViciousBite() {
         super(cardInfo);
 
+        tags.add(MuscleManTot.Enums.BITE);
         setDamage(DAMAGE, UPG_DAMAGE);
     }
 

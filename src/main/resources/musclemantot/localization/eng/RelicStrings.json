@@ -1,51 +1,44 @@
 {
-  "${modID}:RelicID": {
-    "NAME": "Good Relic",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
-    "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
-    ]
-  },
   "${modID}:HalfEatenGourmetBagel": {
     "NAME": "Half Eaten Gourmet Bagel",
     "FLAVOR": "It was a gift from Amy's coworkers.",
     "DESCRIPTIONS": [
-      "Start each combat with 1 *Binge."
+      "Start each combat with #b1 #ymusclemantot:Binge."
     ]
   },
   "${modID}:BoxOfHalfEatenGourmetBagels": {
     "NAME": "Box Of Half Eaten Gourmet Bagels",
     "FLAVOR": "OH MY GOD HE'S GOTTEN INTO THE WHOLE BOX",
     "DESCRIPTIONS": [
-      ""
+      "Start each combat with #b1 #ymusclemantot:Binge. Gain #b1 #ymusclemantot:Binge after you #y:ymusclemantot:Purge."
     ]
   },
   "${modID}:CatnipBanana": {
     "NAME": "Catnip Banana",
-    "FLAVOR": "",
+    "FLAVOR": "A menace that needs to be hunted. Yellow fruit can't be trusted.",
     "DESCRIPTIONS": [
-      ""
+      "Bite cards deal #b25% more damage."
     ]
   },
   "${modID}:AutomaticFeeder": {
     "NAME": "Automatic Feeder",
-    "FLAVOR": "",
+    "FLAVOR": "Giver of life, sustenance, and joy.",
     "DESCRIPTIONS": [
-      ""
+      "Gain [E] on even numbered turns."
     ]
   },
   "${modID}:CatHammock": {
     "NAME": "Cat Hammock",
-    "FLAVOR": "",
+    "FLAVOR": "The perfect place to rest after a meal.",
     "DESCRIPTIONS": [
-      ""
+      "If your #ymusclemantot:Binge is over #b0 at the end of combat, heal an amount equal to your #ymusclemantot:Binge."
     ]
   },
   "${modID}:Prozac": {
     "NAME": "Prozac",
-    "FLAVOR": "",
+    "FLAVOR": "We've liked him a lot more ever since he started taking it.",
     "DESCRIPTIONS": [
-      ""
+      "Whenever you #ymusclemantot:Purge, its effects are increased by #b1."
     ]
   }
 }
