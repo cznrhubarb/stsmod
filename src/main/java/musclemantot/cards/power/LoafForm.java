@@ -34,7 +34,7 @@ public class LoafForm extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new LoafFormPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new LoafFormPower(p, 3)));
     }
 
     @Override

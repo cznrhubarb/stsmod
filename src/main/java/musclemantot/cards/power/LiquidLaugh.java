@@ -28,11 +28,12 @@ public class LiquidLaugh extends BaseCard {
         super(cardInfo);
 
         setCostUpgrade(1);
+        setMagic(2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new LiquidLaughPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new LiquidLaughPower(p, magicNumber)));
     }
 
     @Override

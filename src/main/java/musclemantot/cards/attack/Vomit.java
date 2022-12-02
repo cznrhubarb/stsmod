@@ -39,7 +39,7 @@ public class Vomit extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int attackCount = p.getPower(BingePower.POWER_ID).amount;
-        for (int i = 0; i <= attackCount; i++) {
+        for (int i = 0; i < attackCount; i++) {
             addToBot(
                     new DamageAction(
                             m,

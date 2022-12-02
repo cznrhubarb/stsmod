@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static musclemantot.MuscleManTotMod.makeID;
 
 public class BingePower extends BasePower implements CloneablePowerInterface {
-    public static final String POWER_ID = makeID(BingePower.class.getSimpleName());
+    public static final String POWER_ID = makeID("Binge");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 

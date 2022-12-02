@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static musclemantot.MuscleManTotMod.makeID;
 
 public class PleasantDemeanorPower extends BasePower implements CloneablePowerInterface {
-    public static final String POWER_ID = makeID(PleasantDemeanorPower.class.getSimpleName());
+    public static final String POWER_ID = makeID("PleasantDemeanor");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
@@ -16,7 +16,7 @@ public class PleasantDemeanorPower extends BasePower implements CloneablePowerIn
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override

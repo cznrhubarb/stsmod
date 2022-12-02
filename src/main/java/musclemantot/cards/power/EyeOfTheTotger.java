@@ -25,11 +25,13 @@ public class EyeOfTheTotger extends BaseCard {
 
     public EyeOfTheTotger() {
         super(cardInfo);
+
+        setMagic(1, 1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new EyeOfTheTotgerPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new EyeOfTheTotgerPower(p, magicNumber)));
     }
 
     @Override
