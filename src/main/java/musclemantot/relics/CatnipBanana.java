@@ -14,5 +14,8 @@ public class CatnipBanana extends BaseRelic {
         super(ID, NAME, MuscleManTot.Enums.CARD_COLOR, RARITY, SOUND);
     }
 
-    
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
 }
