@@ -1,9 +1,12 @@
 package musclemantot.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.util.CardInfo;
@@ -24,10 +27,15 @@ public class Purr extends BaseCard {
 
     public Purr() {
         super(cardInfo);
+
+        this.exhaust = true;
+        setCostUpgrade(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new GainEnergyAction(1));
+        this.addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, 1), 1));
     }
 
     @Override

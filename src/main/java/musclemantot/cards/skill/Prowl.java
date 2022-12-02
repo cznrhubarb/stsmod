@@ -14,15 +14,20 @@ public class Prowl extends BaseCard {
             Prowl.class.getSimpleName(),
             1,
             CardType.SKILL,
-            CardTarget.SELF,
+            CardTarget.ALL_ENEMY,
             CardRarity.COMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 
     public static final String ID = makeID(cardInfo.baseId);
 
+    private static final int VULNERABLE = 3;
+    private static final int UPG_VULNERABLE = 2;
+
     public Prowl() {
         super(cardInfo);
+
+        setMagic(VULNERABLE, UPG_VULNERABLE);
     }
 
     @Override
