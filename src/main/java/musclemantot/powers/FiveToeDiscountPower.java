@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static musclemantot.MuscleManTotMod.makeID;
 
 public class FiveToeDiscountPower extends BasePower implements CloneablePowerInterface {
-    public static final String POWER_ID = makeID(FiveToeDiscountPower.class.getSimpleName());
+    public static final String POWER_ID = makeID("FiveToeDiscount");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
@@ -16,7 +16,12 @@ public class FiveToeDiscountPower extends BasePower implements CloneablePowerInt
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        StringBuilder energyString = new StringBuilder();
+        for (int i = 0; i < amount; i++) {
+            energyString.append(" [E]");
+        }
+
+        this.description = DESCRIPTIONS[0] + energyString + DESCRIPTIONS[1];
     }
 
     @Override

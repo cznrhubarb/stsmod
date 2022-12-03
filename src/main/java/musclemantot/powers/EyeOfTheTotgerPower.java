@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static musclemantot.MuscleManTotMod.makeID;
 
 public class EyeOfTheTotgerPower extends BasePower implements CloneablePowerInterface {
-    public static final String POWER_ID = makeID(EyeOfTheTotgerPower.class.getSimpleName());
+    public static final String POWER_ID = makeID("EyeOfTheTotger");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
@@ -15,8 +15,9 @@ public class EyeOfTheTotgerPower extends BasePower implements CloneablePowerInte
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
+    @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override

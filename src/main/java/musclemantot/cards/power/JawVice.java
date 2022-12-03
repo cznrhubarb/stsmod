@@ -28,11 +28,13 @@ public class JawVice extends BaseCard {
         super(cardInfo);
 
         setInnate(false, true);
+        setMagic(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new JawVicePower(p, 1)));
+        // TODO: Maybe stack amount should be 0?
+        addToBot(new ApplyPowerAction(p, p, new JawVicePower(p, magicNumber)));
     }
 
     @Override

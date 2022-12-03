@@ -30,11 +30,12 @@ public class LoafForm extends BaseCard {
 
         tags.add(BaseModCardTags.FORM);
         setEthereal(true, false);
+        setMagic(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new LoafFormPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new LoafFormPower(p, magicNumber)));
     }
 
     @Override

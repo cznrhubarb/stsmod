@@ -31,11 +31,12 @@ public class PleasantDemeanor extends BaseCard {
         super(cardInfo);
 
         setInnate(false, true);
+        setMagic(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new PleasantDemeanorPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new PleasantDemeanorPower(p, magicNumber)));
     }
 
     @Override

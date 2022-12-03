@@ -1,8 +1,70 @@
 {
-  "${ModID}:Binge": {
+  "${modID}:Binge": {
     "NAME": "Binge",
     "DESCRIPTIONS": [
       "You are full."
+    ]
+  },
+  "${modID}:EyeOfTheTotger": {
+    "NAME": "Eye Of The Totger",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block at the end of each turn for each #yBinge you have."
+    ]
+  },
+  "${modID}:FallFromAmysGrace": {
+    "NAME": "Fall From Amy's Grace",
+    "DESCRIPTIONS": [
+      "#yStrength also increases amount of #yPoison inflicted."
+    ]
+  },
+  "${modID}:FiveToeDiscount": {
+    "NAME": "Five Toe Discount",
+    "DESCRIPTIONS": [
+      "Gain",
+      " every time you #yBinge."
+    ]
+  },
+  "${modID}:GuzzleGut": {
+    "NAME": "Guzzle Gut",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoison to ALL enemies each time you #yBinge."
+    ]
+  },
+  "${modID}:JawVice": {
+    "NAME": "Jaw Vice",
+    "DESCRIPTIONS": [
+      "Bite cards cost #b",
+      " less [E] to play."
+    ]
+  },
+  "${modID}:LiquidLaugh": {
+    "NAME": "Liquid Laugh",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoison to ALL enemies each time you #yPurge."
+    ]
+  },
+  "${modID}:LoafForm": {
+    "NAME": "Loaf Form",
+    "DESCRIPTIONS": [
+      "#yBinge #b",
+      " at the start of every turn."
+    ]
+  },
+  "${modID}:PleasantDemeanor": {
+    "NAME": "Pleasant Demeanor",
+    "DESCRIPTIONS": [
+      "Enemies gain #b",
+      " #yWeak after attacking."
+    ]
+  },
+  "${modID}:PurroteinPowder": {
+    "NAME": "Purrotein Powder",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStrength every time you #yBinge."
     ]
   }
 }
