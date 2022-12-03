@@ -64,11 +64,15 @@
   },
   "${modID}:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Purge X. Deal !D! damage. NL Apply !M! Poison to ALL enemies."
+    "DESCRIPTION": "Purge X. NL Deal !D! damage. NL Apply !M! Poison to ALL enemies."
   },
   "${modID}:Puke": {
     "NAME": "Puke",
-    "DESCRIPTION": "Purge X. Deal !D! damage. NL Apply !M! Poison X times."
+    "DESCRIPTION": "Purge X. NL Deal !D! damage. NL Apply !M! Poison X times."
+  },
+  "${modID}:Hork": {
+    "NAME": "Hork",
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! Dexterity."
   },
   "${modID}:ChewThrough": {
     "NAME": "Chew Through",
@@ -81,6 +85,10 @@
   "${modID}:GnawingBite": {
     "NAME": "Gnawing Bite",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Binge."
+  },
+  "${modID}:ViciousBite": {
+    "NAME": "Vicious Bite",
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! HP."
   },
   "${modID}:Big Bite": {
     "NAME": "Big Bite",
@@ -99,6 +107,14 @@
     "NAME": "Take the High Ground",
     "DESCRIPTION": "Apply !M! Vulnerable."
   },
+  "${modID}:Meow": {
+    "NAME": "Meow",
+    "DESCRIPTION": "Can only be played if your binge is less than or equal to !M!. NL Draw !M! cards."
+  },
+  "${modID}:Purr": {
+    "NAME": "Purr",
+    "DESCRIPTION": "Gain [E]. NL Next turn gain [E]. NL Exhaust."
+  },
   "${modID}:DeepSlumber": {
     "NAME": "Deep Slumber",
     "DESCRIPTION": "Gain !B! X Block for each Binge gained this combat."
@@ -106,6 +122,26 @@
   "${modID}:Yawn": {
     "NAME": "Yawn",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! card."
+  },
+  "${modID}:Kneading": {
+    "NAME": "Kneading",
+    "DESCRIPTION": "Gain !B! Block for each enemy in combat."
+  },
+  "${modID}:Shed": {
+    "NAME": "Shed",
+    "DESCRIPTION": "Gain !M! Artifacts."
+  },
+  "${modID}:Groom": {
+    "NAME": "Groom",
+    "DESCRIPTION": "Draw !M! cards. NL Discard !M! cards."
+  },
+  "${modID}:Nuzzle": {
+    "NAME": "Nuzzle",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Binge."
+  },
+  "${modID}:Prowl": {
+    "NAME": "Prowl",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies."
   },
   //power cards
   "${modID}:PleasantDemeanor": {

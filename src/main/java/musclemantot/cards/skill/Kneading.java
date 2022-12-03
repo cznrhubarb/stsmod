@@ -1,18 +1,24 @@
 package musclemantot.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.Frost;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.util.CardInfo;
+
+import java.util.Iterator;
 
 import static musclemantot.MuscleManTotMod.makeID;
 
 public class Kneading extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             Kneading.class.getSimpleName(),
-            1,
+            2,
             CardType.SKILL,
             CardTarget.SELF,
             CardRarity.COMMON,
@@ -21,12 +27,30 @@ public class Kneading extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
+    private static final int BLOCK = 10;
+
     public Kneading() {
         super(cardInfo);
+
+        setBlock(BLOCK);
+        setCostUpgrade(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int count = 0;
+        Iterator var4 = AbstractDungeon.getMonsters().monsters.iterator();
+
+        while(var4.hasNext()) {
+            AbstractMonster mon = (AbstractMonster)var4.next();
+            if (!mon.isDeadOrEscaped()) {
+                ++count;
+            }
+        }
+
+        for(int i = 0; i < count * this.magicNumber; ++i) {
+            this.addToBot(new GainBlockAction(p, p, block));
+        }
     }
 
     @Override

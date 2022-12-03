@@ -32,7 +32,7 @@ public class Groom extends BaseCard {
 
         setMagic(DRAW);
         setMagic(DISCARD);
-        setCostUpgrade(1);
+        setCostUpgrade(0);
     }
 
     @Override

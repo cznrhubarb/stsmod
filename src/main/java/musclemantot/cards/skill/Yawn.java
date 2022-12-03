@@ -16,7 +16,7 @@ public class Yawn extends BaseCard {
             Yawn.class.getSimpleName(),
             1,
             CardType.SKILL,
-            CardTarget.ENEMY,
+            CardTarget.SELF,
             CardRarity.COMMON,
             MuscleManTot.Enums.CARD_COLOR
     );

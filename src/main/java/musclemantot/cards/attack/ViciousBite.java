@@ -2,6 +2,7 @@ package musclemantot.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,7 +13,8 @@ import musclemantot.util.CardInfo;
 
 import static musclemantot.MuscleManTotMod.makeID;
 
-public class ViciousBite extends BaseCard {
+public class
+ViciousBite extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             ViciousBite.class.getSimpleName(),
             1,
@@ -24,14 +26,18 @@ public class ViciousBite extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 15;
+    private static final int UPG_DAMAGE = 5;
+
+    private static final int HEALTH = 5;
 
     public ViciousBite() {
         super(cardInfo);
 
         tags.add(MuscleManTot.Enums.BITE);
         setDamage(DAMAGE, UPG_DAMAGE);
+
+        setMagic(HEALTH);
     }
 
     @Override
@@ -42,6 +48,7 @@ public class ViciousBite extends BaseCard {
                 new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL)
         );
+        this.addToBot(new LoseHPAction(p, p, this.magicNumber));
     }
 
     @Override

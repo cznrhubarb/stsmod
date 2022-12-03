@@ -29,7 +29,7 @@ public class Purr extends BaseCard {
         super(cardInfo);
 
         this.exhaust = true;
-        setCostUpgrade(1);
+        setCostUpgrade(0);
     }
 
     @Override
