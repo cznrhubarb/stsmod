@@ -28,7 +28,6 @@ public class Purr extends BaseCard {
     public Purr() {
         super(cardInfo);
 
-        this.exhaust = true;
         setCostUpgrade(0);
     }
 

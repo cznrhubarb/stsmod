@@ -121,7 +121,7 @@
   },
   "${modID}:Purr": {
     "NAME": "Purr",
-    "DESCRIPTION": "Gain [E]. NL Next turn gain [E]. NL Exhaust."
+    "DESCRIPTION": "Gain [E]. NL Next turn gain [E]."
   },
   "${modID}:DeepSlumber": {
     "NAME": "Deep Slumber",
@@ -145,11 +145,15 @@
   },
   "${modID}:Nuzzle": {
     "NAME": "Nuzzle",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Binge."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! musclemantot:Binge."
   },
   "${modID}:Prowl": {
     "NAME": "Prowl",
     "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies."
+  },
+  "${modID}:Snatch": {
+    "NAME": "Snatch",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to apply a buff, gain !M! Strength."
   },
   //power cards
   "${modID}:PleasantDemeanor": {

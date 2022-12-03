@@ -26,17 +26,19 @@ public class Nuzzle extends BaseCard {
 
     private static final int BLOCK = 6;
     private static final int UPG_BLOCK = 3;
+    private static final int BINGE_GAIN = 1;
 
     public Nuzzle() {
         super(cardInfo);
 
         setBlock(BLOCK, UPG_BLOCK);
+        setMagic(BINGE_GAIN);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new ApplyPowerAction(p, p, new BingePower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new BingePower(p, magicNumber)));
     }
 
     @Override
