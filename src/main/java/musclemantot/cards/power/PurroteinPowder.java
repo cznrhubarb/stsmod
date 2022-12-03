@@ -18,7 +18,7 @@ public class PurroteinPowder extends BaseCard {
             2,
             CardType.POWER,
             CardTarget.SELF,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 

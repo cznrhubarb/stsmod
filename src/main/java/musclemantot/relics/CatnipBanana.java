@@ -1,5 +1,6 @@
 package musclemantot.relics;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import musclemantot.characters.MuscleManTot;
 
 import static musclemantot.MuscleManTotMod.makeID;
@@ -17,5 +18,13 @@ public class CatnipBanana extends BaseRelic {
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
+    }
+
+    public float atDamageModify(float damage, AbstractCard c) {
+        if (c.hasTag(MuscleManTot.Enums.BITE)) {
+            return damage * 1.25F;
+        } else {
+            return damage;
+        }
     }
 }

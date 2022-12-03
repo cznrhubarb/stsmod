@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
+import musclemantot.util.BingeUtil;
 import musclemantot.util.CardInfo;
 
 import static musclemantot.MuscleManTotMod.makeID;
@@ -35,6 +36,7 @@ public class Spew extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        BingeUtil.getPlayerBinge();
         addToBot(
             new DamageAction(
                 m,

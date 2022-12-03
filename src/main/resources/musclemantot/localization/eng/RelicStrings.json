@@ -10,7 +10,7 @@
     "NAME": "Box Of Half Eaten Gourmet Bagels",
     "FLAVOR": "OH MY GOD HE'S GOTTEN INTO THE WHOLE BOX",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ymusclemantot:Binge. Gain #b1 #ymusclemantot:Binge after you #y:ymusclemantot:Purge."
+      "Start each combat with #b1 #ymusclemantot:Binge. Gain #b1 #ymusclemantot:Binge after you #ymusclemantot:Purge."
     ]
   },
   "${modID}:CatnipBanana": {
@@ -31,7 +31,7 @@
     "NAME": "Cat Hammock",
     "FLAVOR": "The perfect place to rest after a meal.",
     "DESCRIPTIONS": [
-      "If your #ymusclemantot:Binge is over #b0 at the end of combat, heal an amount equal to your #ymusclemantot:Binge."
+      "If your #ymusclemantot:Binge is over #b0 at the end of combat, heal an amount equal to your #ymusclemantot:Binge (max 10)."
     ]
   },
   "${modID}:Prozac": {

@@ -16,7 +16,7 @@
   },
   "${modID}:Vomit": {
     "NAME": "Vomit",
-    "DESCRIPTION": "Purge X. NL Deal !D! damage X times."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost."
   },
   "${modID}:Scratch": {
     "NAME": "Scratch",
@@ -28,7 +28,10 @@
   },
   "${modID}:CrunchAndMunch": {
     "NAME": "Crunch and Munch",
-    "DESCRIPTION": "Deal !D! damage. NL Binge !M! for each bite played this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 musclemantot:Binge for each bite played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gains !M! musclemantot:Binge.)"
+    ]
   },
   "${modID}:Kick": {
     "NAME": "Kick",
@@ -48,11 +51,11 @@
   },
   "${modID}:LitterSplash": {
     "NAME": "Litter Splash",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Add !M! Slimed to your deck."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Add !M! *Slimed cards to your discard."
   },
   "${modID}:BowlOver": {
     "NAME": "Bowl Over",
-    "DESCRIPTION": "Deal !D! damage to all enemies X times equal to your binge."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times equal to your musclemantot:Binge."
   },
   "${modID}:BatAround": {
     "NAME": "Bat Around",
@@ -64,11 +67,11 @@
   },
   "${modID}:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Purge X. NL Deal !D! damage. NL Apply !M! Poison to ALL enemies."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage. NL Apply !M! Poison to ALL enemies."
   },
   "${modID}:Puke": {
     "NAME": "Puke",
-    "DESCRIPTION": "Purge X. NL Deal !D! damage. NL Apply !M! Poison X times."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage. NL Apply !M! Poison for each musclemantot:Binge lost."
   },
   "${modID}:Hork": {
     "NAME": "Hork",
@@ -84,15 +87,20 @@
   },
   "${modID}:GnawingBite": {
     "NAME": "Gnawing Bite",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Binge."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! musclemantot:Binge."
   },
   "${modID}:ViciousBite": {
     "NAME": "Vicious Bite",
     "DESCRIPTION": "Deal !D! damage. NL Lose !M! HP."
   },
-  "${modID}:Big Bite": {
+  "${modID}:BigBite": {
     "NAME": "Big Bite",
-    "DESCRIPTION": "Reduce the cost of this card by your number of Binge. NL Deal !D! damage."
+    "DESCRIPTION": "Reduce the cost of this card by your number of musclemantot:Binge. NL Deal !D! damage."
+  },
+  "${modID}:Regurgitate": {
+    "NAME": "Regurgitate",
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost."
   },
   //skill cards
   "${modID}:Defend_Brown": {
@@ -101,7 +109,7 @@
   },
   "${modID}:StuffFace": {
     "NAME": "Stuff Face",
-    "DESCRIPTION": "Gain !M! Binge."
+    "DESCRIPTION": "Gain !M! musclemantot:Binge."
   },
   "${modID}:TakeTheHighGround": {
     "NAME": "Take the High Ground",
@@ -117,7 +125,7 @@
   },
   "${modID}:DeepSlumber": {
     "NAME": "Deep Slumber",
-    "DESCRIPTION": "Gain !B! X Block for each Binge gained this combat."
+    "DESCRIPTION": "Gain !B! X Block for each musclemantot:Binge gained this combat."
   },
   "${modID}:Yawn": {
     "NAME": "Yawn",
