@@ -2,15 +2,17 @@
   {
     "PROPER_NAME": "Binge",
     "NAMES": [
-      "binge"
+      "binge",
+      "Binge"
     ],
     "DESCRIPTION": "A level of fullness. Does nothing on its own."
   },
   {
     "PROPER_NAME": "Purge",
     "NAMES": [
-      "purge"
+      "purge",
+      "Purge"
     ],
-    "DESCRIPTION": "Removes all ${modId}:Binge when used."
+    "DESCRIPTION": "Removes all #yBinge when used."
   }
 ]

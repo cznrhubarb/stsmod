@@ -37,20 +37,15 @@ public class Kneading extends BaseCard {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(AbstractPlayer p, AbstractMonster _m) {
         int count = 0;
-        Iterator var4 = AbstractDungeon.getMonsters().monsters.iterator();
-
-        while(var4.hasNext()) {
-            AbstractMonster mon = (AbstractMonster)var4.next();
-            if (!mon.isDeadOrEscaped()) {
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (!m.isDeadOrEscaped()) {
                 ++count;
             }
         }
 
-        for(int i = 0; i < count * this.magicNumber; ++i) {
-            this.addToBot(new GainBlockAction(p, p, block));
-        }
+        this.addToBot(new GainBlockAction(p, p, block * count));
     }
 
     @Override

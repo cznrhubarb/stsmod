@@ -21,7 +21,7 @@ public class Shed extends BaseCard {
             2,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.COMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 

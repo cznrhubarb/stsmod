@@ -15,7 +15,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 public class LiquidLaugh extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             LiquidLaugh.class.getSimpleName(),
-            2,
+            1,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.UNCOMMON,
@@ -27,7 +27,7 @@ public class LiquidLaugh extends BaseCard {
     public LiquidLaugh() {
         super(cardInfo);
 
-        setCostUpgrade(1);
+        setCostUpgrade(0);
         setMagic(2);
     }
 

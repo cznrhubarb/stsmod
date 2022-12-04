@@ -2,7 +2,6 @@ package musclemantot.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.powers.BingePower;
@@ -13,7 +12,7 @@ public class HalfEatenGourmetBagel extends BaseRelic {
     private static final String NAME = HalfEatenGourmetBagel.class.getSimpleName();
     public static final String ID = makeID(NAME);
     private static final RelicTier RARITY = RelicTier.STARTER;
-    private static final LandingSound SOUND = LandingSound.SOLID;
+    private static final LandingSound SOUND = LandingSound.FLAT;
 
     public HalfEatenGourmetBagel() {
         super(ID, NAME, MuscleManTot.Enums.CARD_COLOR, RARITY, SOUND);

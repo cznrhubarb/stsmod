@@ -15,7 +15,7 @@
   "${modID}:FallFromAmysGrace": {
     "NAME": "Fall From Amy's Grace",
     "DESCRIPTIONS": [
-      "#yStrength also increases amount of #yPoison inflicted."
+      "#yStrength also increases amount of #yPoison inflicted. NL Does not stack."
     ]
   },
   "${modID}:FiveToeDiscount": {
@@ -36,7 +36,7 @@
     "NAME": "Jaw Vice",
     "DESCRIPTIONS": [
       "Bite cards cost #b",
-      " less [E] to play."
+      " less [E]. NL Does not stack."
     ]
   },
   "${modID}:LiquidLaugh": {
@@ -56,8 +56,8 @@
   "${modID}:PleasantDemeanor": {
     "NAME": "Pleasant Demeanor",
     "DESCRIPTIONS": [
-      "Enemies gain #b",
-      " #yWeak after attacking."
+      "At the end of combat, raise your Max HP by #b",
+      " for each enemy that was defeated."
     ]
   },
   "${modID}:PurroteinPowder": {

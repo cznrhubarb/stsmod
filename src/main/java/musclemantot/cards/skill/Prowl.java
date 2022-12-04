@@ -3,7 +3,9 @@ package musclemantot.cards.skill;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
@@ -33,8 +35,12 @@ public class Prowl extends BaseCard {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+    public void use(AbstractPlayer p, AbstractMonster _m) {
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (!m.isDead && !m.isDying) {
+                this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
+            }
+        }
     }
 
     @Override

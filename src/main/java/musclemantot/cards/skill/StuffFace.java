@@ -23,15 +23,18 @@ public class StuffFace extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
+    private static final int BINGE_GAIN = 1;
+
     public StuffFace() {
         super(cardInfo);
 
         setCostUpgrade(0);
+        setMagic(BINGE_GAIN);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new BingePower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new BingePower(p, BINGE_GAIN)));
     }
 
     @Override

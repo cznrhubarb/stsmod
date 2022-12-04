@@ -16,7 +16,7 @@
   },
   "${modID}:Vomit": {
     "NAME": "Vomit",
-    "DESCRIPTION": "Purge X. NL Deal !D! damage X times."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost."
   },
   "${modID}:Scratch": {
     "NAME": "Scratch",
@@ -28,7 +28,10 @@
   },
   "${modID}:CrunchAndMunch": {
     "NAME": "Crunch and Munch",
-    "DESCRIPTION": "Deal !D! damage. NL Binge !M! for each bite played this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 musclemantot:Binge for each bite played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gains !M! musclemantot:Binge.)"
+    ]
   },
   "${modID}:Kick": {
     "NAME": "Kick",
@@ -48,11 +51,14 @@
   },
   "${modID}:LitterSplash": {
     "NAME": "Litter Splash",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Add !M! Slimed to your deck."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Add !M! *Slimed cards to your discard."
   },
   "${modID}:BowlOver": {
     "NAME": "Bowl Over",
-    "DESCRIPTION": "Deal !D! damage to all enemies X times equal to your binge."
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is !M! or more. NL Deal !D! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is not high enough!"
+    ]
   },
   "${modID}:BatAround": {
     "NAME": "Bat Around",
@@ -64,11 +70,15 @@
   },
   "${modID}:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Purge X. NL Deal !D! damage. NL Apply !M! Poison to ALL enemies."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage to ALL enemies for each musclemantot:Binge lost."
   },
   "${modID}:Puke": {
     "NAME": "Puke",
-    "DESCRIPTION": "Purge X. NL Deal !D! damage. NL Apply !M! Poison X times."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage and apply !M! Poison for each musclemantot:Binge lost."
+  },
+  "${modID}:Hurl": {
+    "NAME": "Hurl",
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage and apply !M! Poison to a random enemy for each musclemantot:Binge lost."
   },
   "${modID}:Hork": {
     "NAME": "Hork",
@@ -84,15 +94,20 @@
   },
   "${modID}:GnawingBite": {
     "NAME": "Gnawing Bite",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Binge."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! musclemantot:Binge."
   },
   "${modID}:ViciousBite": {
     "NAME": "Vicious Bite",
     "DESCRIPTION": "Deal !D! damage. NL Lose !M! HP."
   },
-  "${modID}:Big Bite": {
+  "${modID}:BigBite": {
     "NAME": "Big Bite",
-    "DESCRIPTION": "Reduce the cost of this card by your number of Binge. NL Deal !D! damage."
+    "DESCRIPTION": "Reduce the cost of this card by your number of musclemantot:Binge. NL Deal !D! damage."
+  },
+  "${modID}:Regurgitate": {
+    "NAME": "Regurgitate",
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost."
   },
   //skill cards
   "${modID}:Defend_Brown": {
@@ -101,7 +116,7 @@
   },
   "${modID}:StuffFace": {
     "NAME": "Stuff Face",
-    "DESCRIPTION": "Gain !M! Binge."
+    "DESCRIPTION": "Gain !M! musclemantot:Binge."
   },
   "${modID}:TakeTheHighGround": {
     "NAME": "Take the High Ground",
@@ -113,11 +128,43 @@
   },
   "${modID}:Purr": {
     "NAME": "Purr",
-    "DESCRIPTION": "Gain [E]. NL Next turn gain [E]. NL Exhaust."
+    "DESCRIPTION": "Gain [E]. NL Next turn gain [E]."
+  },
+  "${modID}:SneakABite": {
+    "NAME": "Sneak A Bite",
+    "DESCRIPTION": "Put all Bite cards from your discard pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put all Bite cards from your discard pile into your hand."
+  },
+  "${modID}:Blep": {
+    "NAME": "Blep",
+    "DESCRIPTION": "Can only be played if no attacks have been played this turn. NL Lose 3 Strength this turn. NL ALL enemies lose !M! Strength this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "I already played an #rAttack this turn!"
+    ]
+  },
+  "${modID}:SaunterAway": {
+    "NAME": "Saunter Away",
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is !M! or more. NL Escape from a non-boss combat. Receive no rewards.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is not high enough!",
+      "I can't escape from a boss!",
+      "I can't escape with someone behind me!"
+    ]
+  },
+  "${modID}:Intimidate": {
+    "NAME": "Intimidate",
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is 3 or more. NL Enemy loses 2 Strength. NL Apply 3 Vulnerable. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is not high enough!"
+    ]
   },
   "${modID}:DeepSlumber": {
     "NAME": "Deep Slumber",
-    "DESCRIPTION": "Gain !B! X Block for each Binge gained this combat."
+    "DESCRIPTION": "Gain !B! X Block for each musclemantot:Binge gained this combat."
+  },
+  "${modID}:BefriendRaccoon": {
+    "NAME": "Befriend Raccoon",
+    "DESCRIPTION": "Put !M! cards from your discard pile into your hand."
   },
   "${modID}:Yawn": {
     "NAME": "Yawn",
@@ -129,7 +176,7 @@
   },
   "${modID}:Shed": {
     "NAME": "Shed",
-    "DESCRIPTION": "Gain !M! Artifacts."
+    "DESCRIPTION": "Gain !M! Artifact."
   },
   "${modID}:Groom": {
     "NAME": "Groom",
@@ -137,17 +184,21 @@
   },
   "${modID}:Nuzzle": {
     "NAME": "Nuzzle",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Binge."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! musclemantot:Binge."
   },
   "${modID}:Prowl": {
     "NAME": "Prowl",
     "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies."
   },
+  "${modID}:Snatch": {
+    "NAME": "Snatch",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to apply a buff, gain !M! Strength."
+  },
   //power cards
   "${modID}:PleasantDemeanor": {
     "NAME": "Pleasant Demeanor",
-    "DESCRIPTION": "Enemies gain !M! Weak after attacking.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enemies gain !M! Weak after attacking."
+    "DESCRIPTION": "Ethereal. NL At the end of combat, raise your Max HP by !M! for each enemy that was defeated.",
+    "UPGRADE_DESCRIPTION": "At the end of combat, raise your Max HP by !M! for each enemy that was defeated."
   },
   "${modID}:EyeOfTheTotger": {
     "NAME": "Eye Of The Totger",

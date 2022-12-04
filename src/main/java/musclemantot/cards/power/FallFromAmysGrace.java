@@ -18,7 +18,7 @@ public class FallFromAmysGrace extends BaseCard {
             2,
             CardType.POWER,
             CardTarget.SELF,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 

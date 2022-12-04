@@ -7,9 +7,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.powers.BingePower;
+import musclemantot.util.BingeUtil;
 import musclemantot.util.CardInfo;
 
 import static musclemantot.MuscleManTotMod.makeID;
@@ -38,13 +40,12 @@ public class Vomit extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int attackCount = p.getPower(BingePower.POWER_ID).amount;
-        for (int i = 0; i < attackCount; i++) {
+        for (int i = 0; i < BingeUtil.getPlayerBinge(true); i++) {
             addToBot(
                     new DamageAction(
                             m,
                             new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                            AbstractGameAction.AttackEffect.SLASH_VERTICAL)
+                            AbstractGameAction.AttackEffect.POISON)
             );
         }
         addToBot(new RemoveSpecificPowerAction(p, p, BingePower.POWER_ID));
