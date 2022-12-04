@@ -55,7 +55,10 @@
   },
   "${modID}:BowlOver": {
     "NAME": "Bowl Over",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times equal to your musclemantot:Binge."
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is !M! or more. NL Deal !D! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is not high enough!"
+    ]
   },
   "${modID}:BatAround": {
     "NAME": "Bat Around",
@@ -67,11 +70,15 @@
   },
   "${modID}:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage. NL Apply !M! Poison to ALL enemies."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage to ALL enemies for each musclemantot:Binge lost."
   },
   "${modID}:Puke": {
     "NAME": "Puke",
-    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage. NL Apply !M! Poison for each musclemantot:Binge lost."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage and apply !M! Poison for each musclemantot:Binge lost."
+  },
+  "${modID}:Hurl": {
+    "NAME": "Hurl",
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage and apply !M! Poison to a random enemy for each musclemantot:Binge lost."
   },
   "${modID}:Hork": {
     "NAME": "Hork",
