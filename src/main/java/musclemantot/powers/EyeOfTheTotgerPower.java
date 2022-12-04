@@ -27,7 +27,7 @@ public class EyeOfTheTotgerPower extends BasePower implements CloneablePowerInte
     @Override
     public void atEndOfTurn(boolean _isPlayer) {
         this.flash();
-        this.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BingeUtil.getPlayerBinge() * this.amount));
+        this.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BingeUtil.getPlayerBinge(false) * this.amount));
     }
 
     @Override

@@ -36,7 +36,7 @@ public class Spew extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        BingeUtil.getPlayerBinge();
+        BingeUtil.getPlayerBinge(true);
         addToBot(
             new DamageAction(
                 m,

@@ -1,8 +1,10 @@
 package musclemantot.cards.skill;
 
+import com.megacrit.cardcrawl.actions.defect.AllCostToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import musclemantot.actions.AllTagToHandAction;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.util.CardInfo;
@@ -15,7 +17,7 @@ public class SneakABite extends BaseCard {
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 
@@ -23,10 +25,13 @@ public class SneakABite extends BaseCard {
 
     public SneakABite() {
         super(cardInfo);
+
+        setExhaust(true, false);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new AllTagToHandAction(MuscleManTot.Enums.BITE));
     }
 
     @Override

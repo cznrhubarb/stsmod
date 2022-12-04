@@ -40,7 +40,7 @@ public class Vomit extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < BingeUtil.getPlayerBinge(); i++) {
+        for (int i = 0; i < BingeUtil.getPlayerBinge(true); i++) {
             addToBot(
                     new DamageAction(
                             m,

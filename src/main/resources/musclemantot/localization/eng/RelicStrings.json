@@ -10,14 +10,14 @@
     "NAME": "Box Of Half Eaten Gourmet Bagels",
     "FLAVOR": "OH MY GOD HE'S GOTTEN INTO THE WHOLE BOX",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ymusclemantot:Binge. Gain #b1 #ymusclemantot:Binge after you #ymusclemantot:Purge."
+      "Replaces #rHalf #rEaten #rGourmet #rBagel. Start each combat with #b1 #ymusclemantot:Binge. Gain #b1 #ymusclemantot:Binge after you #ymusclemantot:Purge."
     ]
   },
   "${modID}:CatnipBanana": {
     "NAME": "Catnip Banana",
     "FLAVOR": "A menace that needs to be hunted. Yellow fruit can't be trusted.",
     "DESCRIPTIONS": [
-      "Bite cards deal #b25% more damage."
+      "Bite cards deal #b35% more damage."
     ]
   },
   "${modID}:AutomaticFeeder": {

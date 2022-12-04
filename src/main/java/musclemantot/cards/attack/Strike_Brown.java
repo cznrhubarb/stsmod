@@ -38,6 +38,7 @@ public class Strike_Brown extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // TODO: There is a Claw Vfx we can use for all these
         addToBot(
             new DamageAction(
                 m,

@@ -123,9 +123,41 @@
     "NAME": "Purr",
     "DESCRIPTION": "Gain [E]. NL Next turn gain [E]."
   },
+  "${modID}:SneakABite": {
+    "NAME": "Sneak A Bite",
+    "DESCRIPTION": "Put all Bite cards from your discard pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put all Bite cards from your discard pile into your hand."
+  },
+  "${modID}:Blep": {
+    "NAME": "Blep",
+    "DESCRIPTION": "Can only be played if no attacks have been played this turn. NL Lose 3 Strength this turn. NL ALL enemies lose !M! Strength this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "I already played an #rAttack this turn!"
+    ]
+  },
+  "${modID}:SaunterAway": {
+    "NAME": "Saunter Away",
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is !M! or more. NL Escape from a non-boss combat. Receive no rewards.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is not high enough!",
+      "I can't escape from a boss!",
+      "I can't escape with someone behind me!"
+    ]
+  },
+  "${modID}:Intimidate": {
+    "NAME": "Intimidate",
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is 3 or more. NL Enemy loses 2 Strength. NL Apply 3 Vulnerable. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is not high enough!"
+    ]
+  },
   "${modID}:DeepSlumber": {
     "NAME": "Deep Slumber",
     "DESCRIPTION": "Gain !B! X Block for each musclemantot:Binge gained this combat."
+  },
+  "${modID}:BefriendRaccoon": {
+    "NAME": "Befriend Raccoon",
+    "DESCRIPTION": "Put !M! cards from your discard pile into your hand."
   },
   "${modID}:Yawn": {
     "NAME": "Yawn",
@@ -137,7 +169,7 @@
   },
   "${modID}:Shed": {
     "NAME": "Shed",
-    "DESCRIPTION": "Gain !M! Artifacts."
+    "DESCRIPTION": "Gain !M! Artifact."
   },
   "${modID}:Groom": {
     "NAME": "Groom",
@@ -158,8 +190,8 @@
   //power cards
   "${modID}:PleasantDemeanor": {
     "NAME": "Pleasant Demeanor",
-    "DESCRIPTION": "Enemies gain !M! Weak after attacking.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enemies gain !M! Weak after attacking."
+    "DESCRIPTION": "Ethereal. NL At the end of combat, raise your Max HP by !M! for each enemy that was defeated.",
+    "UPGRADE_DESCRIPTION": "At the end of combat, raise your Max HP by !M! for each enemy that was defeated."
   },
   "${modID}:EyeOfTheTotger": {
     "NAME": "Eye Of The Totger",

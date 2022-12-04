@@ -56,8 +56,8 @@
   "${modID}:PleasantDemeanor": {
     "NAME": "Pleasant Demeanor",
     "DESCRIPTIONS": [
-      "Enemies gain #b",
-      " #yWeak after attacking."
+      "At the end of combat, raise your Max HP by #b",
+      " for each enemy that was defeated."
     ]
   },
   "${modID}:PurroteinPowder": {

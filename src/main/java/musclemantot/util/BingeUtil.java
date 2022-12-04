@@ -6,14 +6,14 @@ import musclemantot.powers.BingePower;
 import musclemantot.relics.Prozac;
 
 public class BingeUtil {
-    public static int getPlayerBinge() {
+    public static int getPlayerBinge(boolean isForPurge) {
         AbstractPower bingePower = AbstractDungeon.player.getPower(BingePower.POWER_ID);
         int bingeAmount = 0;
         if (bingePower != null) {
             bingeAmount = bingePower.amount;
         }
 
-        if (AbstractDungeon.player.hasRelic(Prozac.ID)) {
+        if (isForPurge && AbstractDungeon.player.hasRelic(Prozac.ID)) {
             bingeAmount += 1;
         }
 

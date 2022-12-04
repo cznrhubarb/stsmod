@@ -19,7 +19,7 @@ public class CatHammock extends BaseRelic {
     }
 
     public void onVictory() {
-        int bingeAmount = Math.min(10, BingeUtil.getPlayerBinge());
+        int bingeAmount = Math.min(10, BingeUtil.getPlayerBinge(false));
 
         if (bingeAmount > 0) {
             this.flash();

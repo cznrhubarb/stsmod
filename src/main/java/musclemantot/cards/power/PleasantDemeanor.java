@@ -30,8 +30,8 @@ public class PleasantDemeanor extends BaseCard {
     public PleasantDemeanor() {
         super(cardInfo);
 
-        setInnate(false, true);
         setMagic(1);
+        setEthereal(true, false);
     }
 
     @Override

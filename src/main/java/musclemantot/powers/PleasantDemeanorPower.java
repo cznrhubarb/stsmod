@@ -4,8 +4,12 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.unique.IncreaseMaxHpAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
@@ -26,13 +30,18 @@ public class PleasantDemeanorPower extends BasePower implements CloneablePowerIn
     }
 
     @Override
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
+    public void onVictory() {
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.currentHealth > 0) {
+            int enemiesDefeated = 0;
+            for (AbstractMonster mon : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (mon.isDead) {
+                    enemiesDefeated++;
+                }
+            }
             this.flash();
-            this.addToTop(new ApplyPowerAction(info.owner, this.owner, new WeakPower(info.owner, this.amount, false)));
+            p.increaseMaxHp(this.amount * enemiesDefeated, true);
         }
-
-        return damageAmount;
     }
 
     @Override

@@ -36,6 +36,7 @@ public class Scratch extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // TODO: There is a Claw Vfx we can use for all these
         for (int i = 0; i < 2; i++) {
             addToBot(
                     new DamageAction(
