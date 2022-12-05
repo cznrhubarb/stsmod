@@ -10,11 +10,17 @@ import musclemantot.BingePurgeInterface;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.HashMap;
+
 import static musclemantot.MuscleManTotMod.makeID;
 
 public class BingePower extends BasePower implements CloneablePowerInterface {
     private static final Logger logger = LogManager.getLogger(AbstractCard.class.getName());
     public static final String POWER_ID = makeID("Binge");
+
+    private static final HashMap<Integer, Integer> bingesPerFloor = new HashMap<>();
+    private static final HashMap<Integer, Integer> purgesPerFloor = new HashMap<>();
+
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
@@ -42,7 +48,8 @@ public class BingePower extends BasePower implements CloneablePowerInterface {
     }
 
     private void onBinge() {
-        logger.info("Binge power on stack: " + this.amount);
+        bingesPerFloor.put(AbstractDungeon.floorNum, bingesPerFloor.getOrDefault(AbstractDungeon.floorNum, 0) + 1);
+
         for (AbstractRelic relic : AbstractDungeon.player.relics) {
             if (relic instanceof BingePurgeInterface) {
                 ((BingePurgeInterface) relic).onBinge(this.amount);
@@ -74,7 +81,8 @@ public class BingePower extends BasePower implements CloneablePowerInterface {
 
     @Override
     public void onRemove() {
-        logger.info("Binge power on remove: " + this.amount);
+        purgesPerFloor.put(AbstractDungeon.floorNum, purgesPerFloor.getOrDefault(AbstractDungeon.floorNum, 0) + 1);
+
         for (AbstractRelic relic : AbstractDungeon.player.relics) {
             if (relic instanceof BingePurgeInterface) {
                 ((BingePurgeInterface) relic).onPurge(this.amount);
@@ -102,6 +110,19 @@ public class BingePower extends BasePower implements CloneablePowerInterface {
                 ((BingePurgeInterface) power).onPurge(this.amount);
             }
         }
+    }
+
+    public static void resetBingePurgeCount() {
+        bingesPerFloor.clear();
+        purgesPerFloor.clear();
+    }
+
+    public static int getBingesThisCombat() {
+        return bingesPerFloor.getOrDefault(AbstractDungeon.floorNum, 0);
+    }
+
+    public static int getPurgesThisCombat() {
+        return purgesPerFloor.getOrDefault(AbstractDungeon.floorNum, 0);
     }
 
     @Override

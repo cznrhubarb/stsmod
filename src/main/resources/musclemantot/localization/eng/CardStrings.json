@@ -132,6 +132,13 @@
       "My #rBinge is too high!"
     ]
   },
+  "${modID}:CatNap": {
+    "NAME": "Cat Nap",
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is less than !M!. NL Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is too high!"
+    ]
+  },
   "${modID}:Purr": {
     "NAME": "Purr",
     "DESCRIPTION": "Gain [E]. NL Next turn gain [E]."
@@ -166,7 +173,10 @@
   },
   "${modID}:DeepSlumber": {
     "NAME": "Deep Slumber",
-    "DESCRIPTION": "Gain !B! X Block for each musclemantot:Binge gained this combat."
+    "DESCRIPTION": "Gain !B! Block for each time musclemantot:Binge has been gained this combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain Block !M! time(s).)"
+    ]
   },
   "${modID}:BefriendRaccoon": {
     "NAME": "Befriend Raccoon",

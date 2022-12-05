@@ -87,6 +87,9 @@ public class MuscleManTotMod implements
         //Set up the mod information displayed in the in-game mods menu.
         //The information used is taken from your pom.xml file.
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+
+        // TODO: This is where we add potions
+        // BaseMod.addPotion()
     }
 
     /*----------Localization----------*/
