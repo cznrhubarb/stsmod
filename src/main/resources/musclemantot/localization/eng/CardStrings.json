@@ -30,7 +30,7 @@
     "NAME": "Crunch and Munch",
     "DESCRIPTION": "Deal !D! damage. NL Gain 1 musclemantot:Binge for each bite played this turn.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Gains !M! musclemantot:Binge.)"
+      " NL (Gains !M! Binge.)"
     ]
   },
   "${modID}:Kick": {
@@ -47,7 +47,10 @@
   },
   "${modID}:Spray": {
     "NAME": "Spray",
-    "DESCRIPTION": "Deal !D! damage X times. X equals an enemy's buffs and debuffs."
+    "DESCRIPTION": "Deal !D! damage for each buff and debuff the enemy has.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits !M! time(s).)"
+    ]
   },
   "${modID}:LitterSplash": {
     "NAME": "Litter Splash",
@@ -62,7 +65,7 @@
   },
   "${modID}:BatAround": {
     "NAME": "Bat Around",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage for each enemy in combat."
   },
   "${modID}:Bully": {
     "NAME": "Bully",
@@ -90,7 +93,7 @@
   },
   "${modID}:Shred": {
     "NAME": "Shred",
-    "DESCRIPTION": "Deal !D! damage 3 times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "${modID}:GnawingBite": {
     "NAME": "Gnawing Bite",
@@ -102,7 +105,7 @@
   },
   "${modID}:BigBite": {
     "NAME": "Big Bite",
-    "DESCRIPTION": "Reduce the cost of this card by your number of musclemantot:Binge. NL Deal !D! damage."
+    "DESCRIPTION": "Costs 1 less [E] for each musclemantot:Binge you have. NL Deal !D! damage."
   },
   "${modID}:Regurgitate": {
     "NAME": "Regurgitate",
@@ -124,7 +127,10 @@
   },
   "${modID}:Meow": {
     "NAME": "Meow",
-    "DESCRIPTION": "Can only be played if your binge is less than or equal to !M!. NL Draw !M! cards."
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is less than !M!. NL Draw 3 cards.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is too high!"
+    ]
   },
   "${modID}:Purr": {
     "NAME": "Purr",

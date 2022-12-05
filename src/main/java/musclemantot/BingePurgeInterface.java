@@ -3,5 +3,5 @@ package musclemantot;
 public interface BingePurgeInterface {
     void onBinge(int amount);
 
-    void onPurge();
+    void onPurge(int amount);
 }

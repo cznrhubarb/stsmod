@@ -2,6 +2,7 @@ package musclemantot.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import musclemantot.MuscleManTotMod;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
+import musclemantot.powers.BingePower;
 import musclemantot.util.CardInfo;
 
 import java.util.Iterator;
@@ -45,20 +47,24 @@ public class CrunchAndMunch extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m != null) {
-            if (Settings.FAST_MODE) {
-                this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.1F));
-            } else {
-                this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.3F));
+        for (int i = 0; i < magicNumber; i++) {
+            if (m != null) {
+                if (Settings.FAST_MODE) {
+                    this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.1F));
+                } else {
+                    this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.3F));
+                }
             }
-        }
 
-        addToBot(
-            new DamageAction(
-                m,
-                new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.NONE)
-        );
+            addToBot(
+                    new DamageAction(
+                            m,
+                            new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
+                            AbstractGameAction.AttackEffect.NONE)
+            );
+
+            addToBot(new ApplyPowerAction(p, p, new BingePower(p, 1)));
+        }
     }
 
     private void updateMagicByBite() {

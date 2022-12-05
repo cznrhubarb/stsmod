@@ -33,7 +33,7 @@ public class JawVice extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new JawVicePower(p, magicNumber), 0));
+        addToBot(new ApplyPowerAction(p, p, new JawVicePower(p)));
     }
 
     @Override

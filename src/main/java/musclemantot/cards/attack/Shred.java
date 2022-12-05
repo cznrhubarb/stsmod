@@ -31,12 +31,13 @@ public class Shred extends BaseCard {
         super(cardInfo);
 
         setDamage(DAMAGE, UPG_DAMAGE);
+        setMagic(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // TODO: There is a Claw Vfx we can use for all these
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             addToBot(
                     new DamageAction(
                             m,

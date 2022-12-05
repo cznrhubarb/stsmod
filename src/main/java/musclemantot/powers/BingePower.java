@@ -54,6 +54,16 @@ public class BingePower extends BasePower implements CloneablePowerInterface {
                 ((BingePurgeInterface) card).onBinge(this.amount);
             }
         }
+        for (AbstractCard card : AbstractDungeon.player.discardPile.group) {
+            if (card instanceof BingePurgeInterface) {
+                ((BingePurgeInterface) card).onBinge(this.amount);
+            }
+        }
+        for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
+            if (card instanceof BingePurgeInterface) {
+                ((BingePurgeInterface) card).onBinge(this.amount);
+            }
+        }
 
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof BingePurgeInterface) {
@@ -67,19 +77,29 @@ public class BingePower extends BasePower implements CloneablePowerInterface {
         logger.info("Binge power on remove: " + this.amount);
         for (AbstractRelic relic : AbstractDungeon.player.relics) {
             if (relic instanceof BingePurgeInterface) {
-                ((BingePurgeInterface) relic).onPurge();
+                ((BingePurgeInterface) relic).onPurge(this.amount);
             }
         }
 
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             if (card instanceof BingePurgeInterface) {
-                ((BingePurgeInterface) card).onPurge();
+                ((BingePurgeInterface) card).onPurge(this.amount);
+            }
+        }
+        for (AbstractCard card : AbstractDungeon.player.discardPile.group) {
+            if (card instanceof BingePurgeInterface) {
+                ((BingePurgeInterface) card).onPurge(this.amount);
+            }
+        }
+        for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
+            if (card instanceof BingePurgeInterface) {
+                ((BingePurgeInterface) card).onPurge(this.amount);
             }
         }
 
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof BingePurgeInterface) {
-                ((BingePurgeInterface) power).onPurge();
+                ((BingePurgeInterface) power).onPurge(this.amount);
             }
         }
     }

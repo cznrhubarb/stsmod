@@ -7,12 +7,15 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
+import musclemantot.powers.JawVicePower;
 import musclemantot.util.CardInfo;
 
 import static musclemantot.MuscleManTotMod.makeID;
@@ -42,6 +45,10 @@ public class LoveBite extends BaseCard {
         tags.add(MuscleManTot.Enums.BITE);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(WEAK, UPG_WEAK);
+
+        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null && AbstractDungeon.player.hasPower(JawVicePower.POWER_ID)) {
+            this.updateCost(-1);
+        }
     }
 
     @Override

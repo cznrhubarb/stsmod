@@ -15,7 +15,7 @@
   "${modID}:FallFromAmysGrace": {
     "NAME": "Fall From Amy's Grace",
     "DESCRIPTIONS": [
-      "#yStrength also increases amount of #yPoison inflicted. NL Does not stack."
+      "#yStrength also increases amount of #yPoison inflicted."
     ]
   },
   "${modID}:FiveToeDiscount": {
@@ -36,7 +36,7 @@
     "NAME": "Jaw Vice",
     "DESCRIPTIONS": [
       "Bite cards cost #b",
-      " less [E]. NL Does not stack."
+      " less [E] to play."
     ]
   },
   "${modID}:LiquidLaugh": {

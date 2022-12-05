@@ -32,7 +32,7 @@ public class FallFromAmysGrace extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new FallFromAmysGracePower(p, 1), 0));
+        addToBot(new ApplyPowerAction(p, p, new FallFromAmysGracePower(p)));
     }
 
     @Override
