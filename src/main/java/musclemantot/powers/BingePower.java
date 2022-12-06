@@ -7,15 +7,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import musclemantot.BingePurgeInterface;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 
 import static musclemantot.MuscleManTotMod.makeID;
 
 public class BingePower extends BasePower implements CloneablePowerInterface {
-    private static final Logger logger = LogManager.getLogger(AbstractCard.class.getName());
     public static final String POWER_ID = makeID("Binge");
 
     private static final HashMap<Integer, Integer> bingesPerFloor = new HashMap<>();

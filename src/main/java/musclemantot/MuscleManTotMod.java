@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
+import musclemantot.potions.Catnip;
+import musclemantot.potions.Prozac;
 import musclemantot.relics.BaseRelic;
 import musclemantot.util.GeneralUtils;
 import musclemantot.util.KeywordInfo;
@@ -88,8 +90,8 @@ public class MuscleManTotMod implements
         //The information used is taken from your pom.xml file.
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
 
-        // TODO: This is where we add potions
-        // BaseMod.addPotion()
+        BaseMod.addPotion(Catnip.class, Catnip.LIQUID_COLOR, Catnip.HYBRID_COLOR, Catnip.SPOTS_COLOR, Catnip.POTION_ID, MuscleManTot.Enums.MUSCLE_MAN_TOT);
+        BaseMod.addPotion(Prozac.class, Prozac.LIQUID_COLOR, Prozac.HYBRID_COLOR, Prozac.SPOTS_COLOR, Prozac.POTION_ID, MuscleManTot.Enums.MUSCLE_MAN_TOT);
     }
 
     /*----------Localization----------*/

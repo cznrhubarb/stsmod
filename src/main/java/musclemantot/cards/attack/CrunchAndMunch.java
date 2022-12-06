@@ -62,9 +62,9 @@ public class CrunchAndMunch extends BaseCard {
                             new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                             AbstractGameAction.AttackEffect.NONE)
             );
-
-            addToBot(new ApplyPowerAction(p, p, new BingePower(p, 1)));
         }
+
+        addToBot(new ApplyPowerAction(p, p, new BingePower(p, magicNumber)));
     }
 
     private void updateMagicByBite() {

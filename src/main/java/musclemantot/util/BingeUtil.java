@@ -3,7 +3,7 @@ package musclemantot.util;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import musclemantot.powers.BingePower;
-import musclemantot.relics.Prozac;
+import musclemantot.relics.UnattendedLeftovers;
 
 public class BingeUtil {
     public static int getPlayerBinge(boolean isForPurge) {
@@ -13,7 +13,7 @@ public class BingeUtil {
             bingeAmount = bingePower.amount;
         }
 
-        if (isForPurge && AbstractDungeon.player.hasRelic(Prozac.ID)) {
+        if (isForPurge && AbstractDungeon.player.hasRelic(UnattendedLeftovers.ID)) {
             bingeAmount += 1;
         }
 
