@@ -39,7 +39,7 @@ public class Kick extends BaseCard {
             new DamageAction(
                 m,
                 new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL)
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY)
         );
     }
 
