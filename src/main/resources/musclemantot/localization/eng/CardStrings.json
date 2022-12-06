@@ -174,7 +174,10 @@
   },
   "${modID}:LickWounds": {
     "NAME": "Lick Wounds",
-    "DESCRIPTION": "Can only be played if your musclemantot:Binge is !M! or more. NL Heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is 3 or more. NL Heal !M! HP. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "My #rBinge is not high enough!"
+    ]
   },
   "${modID}:SlowBlink": {
     "NAME": "Slow Blink",

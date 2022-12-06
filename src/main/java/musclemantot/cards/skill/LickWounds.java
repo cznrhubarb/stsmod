@@ -39,11 +39,6 @@ public class LickWounds extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            AbstractDungeon.getCurrRoom().smoked = true;
-
-        }
-
         this.addToBot(new HealAction(p, p, this.magicNumber));
     }
 
