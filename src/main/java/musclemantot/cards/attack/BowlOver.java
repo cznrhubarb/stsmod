@@ -20,7 +20,7 @@ public class BowlOver extends BaseCard {
             2,
             CardType.ATTACK,
             CardTarget.ALL_ENEMY,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 

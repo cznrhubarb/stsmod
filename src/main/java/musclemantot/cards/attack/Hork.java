@@ -22,14 +22,14 @@ public class Hork extends BaseCard {
             1,
             CardType.ATTACK,
             CardTarget.ENEMY,
-            CardRarity.COMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 13;
-    private static final int UPG_DAMAGE = 5;
+    private static final int DAMAGE = 20;
+    private static final int UPG_DAMAGE = 6;
 
     private static final int DEXTERITY = 1;
 

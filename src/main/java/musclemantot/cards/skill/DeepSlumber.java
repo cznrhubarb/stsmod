@@ -28,7 +28,7 @@ public class DeepSlumber extends BaseCard implements BingePurgeInterface {
             2,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 

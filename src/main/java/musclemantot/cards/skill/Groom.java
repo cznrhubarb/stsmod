@@ -17,7 +17,7 @@ public class Groom extends BaseCard {
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 

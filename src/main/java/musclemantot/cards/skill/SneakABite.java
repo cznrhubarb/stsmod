@@ -17,7 +17,7 @@ public class SneakABite extends BaseCard {
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 

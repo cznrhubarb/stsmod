@@ -22,7 +22,7 @@ public class ChewThrough extends BaseCard {
             1,
             CardType.ATTACK,
             CardTarget.ENEMY,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 

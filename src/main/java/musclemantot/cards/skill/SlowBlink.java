@@ -23,7 +23,7 @@ public class SlowBlink extends BaseCard {
             2,
             CardType.SKILL,
             CardTarget.ENEMY,
-            CardRarity.COMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 

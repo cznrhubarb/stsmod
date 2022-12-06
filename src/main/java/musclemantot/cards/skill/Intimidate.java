@@ -24,7 +24,7 @@ public class Intimidate extends BaseCard {
             1,
             CardType.SKILL,
             CardTarget.ENEMY,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 
