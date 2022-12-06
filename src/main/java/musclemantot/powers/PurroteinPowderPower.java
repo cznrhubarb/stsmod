@@ -30,7 +30,7 @@ public class PurroteinPowderPower extends BasePower implements CloneablePowerInt
     }
 
     @Override
-    public void onPurge() { }
+    public void onPurge(int amount) { }
 
     @Override
     public AbstractPower makeCopy() {

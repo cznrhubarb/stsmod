@@ -11,8 +11,8 @@ public class FallFromAmysGracePower extends BasePower implements CloneablePowerI
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
-    public FallFromAmysGracePower(AbstractCreature owner, int amount) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+    public FallFromAmysGracePower(AbstractCreature owner) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
     }
 
     public void updateDescription() {
@@ -21,6 +21,6 @@ public class FallFromAmysGracePower extends BasePower implements CloneablePowerI
 
     @Override
     public AbstractPower makeCopy() {
-        return new FallFromAmysGracePower(owner, amount);
+        return new FallFromAmysGracePower(owner);
     }
 }

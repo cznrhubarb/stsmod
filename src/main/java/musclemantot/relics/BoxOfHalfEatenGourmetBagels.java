@@ -41,7 +41,7 @@ public class BoxOfHalfEatenGourmetBagels extends BaseRelic implements BingePurge
     public void onBinge(int amount) { }
 
     @Override
-    public void onPurge() {
+    public void onPurge(int amount) {
         this.flash();
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BingePower(AbstractDungeon.player, 1)));
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));

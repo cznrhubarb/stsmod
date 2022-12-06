@@ -28,7 +28,7 @@ public class LiquidLaughPower extends BasePower implements CloneablePowerInterfa
     public void onBinge(int amount) { }
 
     @Override
-    public void onPurge() {
+    public void onPurge(int amount) {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
 

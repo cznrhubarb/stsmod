@@ -2,13 +2,18 @@ package musclemantot.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.util.CardInfo;
+
+import java.util.Iterator;
 
 import static musclemantot.MuscleManTotMod.makeID;
 
@@ -24,8 +29,8 @@ public class BatAround extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 3;
 
     public BatAround() {
         super(cardInfo);
@@ -35,12 +40,11 @@ public class BatAround extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(
-            new DamageAction(
-                m,
-                new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL)
-        );
+        for (AbstractCreature m2 : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!m2.isDeadOrEscaped()) {
+                this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            }
+        }
     }
 
     @Override
