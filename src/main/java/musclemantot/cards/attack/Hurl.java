@@ -12,11 +12,14 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.powers.BingePower;
+import musclemantot.powers.FallFromAmysGracePower;
 import musclemantot.util.BingeUtil;
 import musclemantot.util.CardInfo;
 
@@ -56,6 +59,29 @@ public class Hurl extends BaseCard {
             }
         }
         addToBot(new RemoveSpecificPowerAction(p, p, BingePower.POWER_ID));
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        this.magicNumber = this.baseMagicNumber + FallFromAmysGracePower.getStrengthBonusIfApplicable(AbstractDungeon.player);
+        this.isMagicNumberModified = this.magicNumber != this.baseMagicNumber;
+        this.initializeDescription();
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        this.magicNumber = this.baseMagicNumber;
+        this.isMagicNumberModified = false;
+        this.initializeDescription();
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        this.magicNumber = this.baseMagicNumber + FallFromAmysGracePower.getStrengthBonusIfApplicable(AbstractDungeon.player);
+        this.isMagicNumberModified = this.magicNumber != this.baseMagicNumber;
+        this.initializeDescription();
     }
 
     @Override

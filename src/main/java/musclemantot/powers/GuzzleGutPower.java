@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import musclemantot.BingePurgeInterface;
 
 import java.util.Iterator;
@@ -28,12 +29,14 @@ public class GuzzleGutPower extends BasePower implements CloneablePowerInterface
 
     @Override
     public void onBinge(int amount) {
+        int strengthBonus = FallFromAmysGracePower.getStrengthBonusIfApplicable(this.owner);
+
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
 
             for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                 if (!m.isDead && !m.isDying) {
-                    this.addToBot(new ApplyPowerAction(m, this.owner, new PoisonPower(m, this.owner, this.amount), this.amount));
+                    this.addToBot(new ApplyPowerAction(m, this.owner, new PoisonPower(m, this.owner, this.amount + strengthBonus)));
                 }
             }
         }

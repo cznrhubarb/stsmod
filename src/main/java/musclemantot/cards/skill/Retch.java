@@ -5,12 +5,15 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.powers.BingePower;
+import musclemantot.powers.FallFromAmysGracePower;
 import musclemantot.util.CardInfo;
 
 import static musclemantot.MuscleManTotMod.makeID;
@@ -49,6 +52,29 @@ public class Retch extends BaseCard {
         }
 
         addToBot(new RemoveSpecificPowerAction(p, p, bingePower));
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        this.magicNumber = this.baseMagicNumber + FallFromAmysGracePower.getStrengthBonusIfApplicable(AbstractDungeon.player);
+        this.isMagicNumberModified = this.magicNumber != this.baseMagicNumber;
+        this.initializeDescription();
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        this.magicNumber = this.baseMagicNumber;
+        this.isMagicNumberModified = false;
+        this.initializeDescription();
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        this.magicNumber = this.baseMagicNumber + FallFromAmysGracePower.getStrengthBonusIfApplicable(AbstractDungeon.player);
+        this.isMagicNumberModified = this.magicNumber != this.baseMagicNumber;
+        this.initializeDescription();
     }
 
     @Override
