@@ -50,6 +50,11 @@ public class Hurl extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractPower fallFromGracePower = p.getPower(FallFromAmysGracePower.POWER_ID);
+        if (fallFromGracePower != null && this.magicNumber != this.baseMagicNumber) {
+            fallFromGracePower.flash();
+        }
+
         for (int i = 0; i < BingeUtil.getPlayerBinge(true); i++) {
             AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
             if (target != null) {

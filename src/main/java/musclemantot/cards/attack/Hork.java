@@ -21,7 +21,7 @@ public class Hork extends BaseCard {
             Hork.class.getSimpleName(),
             1,
             CardType.ATTACK,
-            CardTarget.ENEMY,
+            CardTarget.SELF_AND_ENEMY,
             CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );

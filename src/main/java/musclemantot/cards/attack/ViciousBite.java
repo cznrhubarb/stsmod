@@ -25,7 +25,7 @@ ViciousBite extends BaseCard {
             ViciousBite.class.getSimpleName(),
             1,
             CardType.ATTACK,
-            CardTarget.ENEMY,
+            CardTarget.SELF_AND_ENEMY,
             CardRarity.COMMON,
             MuscleManTot.Enums.CARD_COLOR
     );

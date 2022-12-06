@@ -25,7 +25,7 @@ public class GnawingBite extends BaseCard {
             GnawingBite.class.getSimpleName(),
             2,
             CardType.ATTACK,
-            CardTarget.ENEMY,
+            CardTarget.SELF_AND_ENEMY,
             CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );

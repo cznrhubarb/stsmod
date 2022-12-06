@@ -34,7 +34,7 @@ public class FallFromAmysGracePower extends BasePower implements CloneablePowerI
         int strengthBonus = 0;
         if (p.hasPower(FallFromAmysGracePower.POWER_ID)) {
             AbstractPower strengthPower = p.getPower(StrengthPower.POWER_ID);
-            if (strengthPower != null) {
+            if (strengthPower != null && strengthPower.amount > 0) {
                 strengthBonus = strengthPower.amount;
             }
         }

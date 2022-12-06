@@ -14,6 +14,7 @@ import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
 import musclemantot.powers.BingePower;
 import musclemantot.powers.FallFromAmysGracePower;
+import musclemantot.util.BingeUtil;
 import musclemantot.util.CardInfo;
 
 import static musclemantot.MuscleManTotMod.makeID;
@@ -41,17 +42,18 @@ public class Retch extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower bingePower = p.getPower(BingePower.POWER_ID);
-        int bingeAmount = 0;
-        if (bingePower != null) {
-            bingeAmount = bingePower.amount;
+        int bingeAmount = BingeUtil.getPlayerBinge(true);
+
+        AbstractPower fallFromGracePower = p.getPower(FallFromAmysGracePower.POWER_ID);
+        if (fallFromGracePower != null && this.magicNumber != this.baseMagicNumber && bingeAmount > 0) {
+            fallFromGracePower.flash();
         }
 
         for (int i = 0; i < bingeAmount; i++) {
             addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, magicNumber)));
         }
 
-        addToBot(new RemoveSpecificPowerAction(p, p, bingePower));
+        addToBot(new RemoveSpecificPowerAction(p, p, BingePower.POWER_ID));
     }
 
     @Override

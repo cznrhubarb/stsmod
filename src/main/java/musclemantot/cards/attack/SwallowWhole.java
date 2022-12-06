@@ -27,7 +27,7 @@ public class SwallowWhole extends BaseCard {
             SwallowWhole.class.getSimpleName(),
             1,
             CardType.ATTACK,
-            CardTarget.ENEMY,
+            CardTarget.SELF_AND_ENEMY,
             CardRarity.COMMON,
             MuscleManTot.Enums.CARD_COLOR
     );

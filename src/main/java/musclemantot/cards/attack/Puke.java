@@ -46,6 +46,11 @@ public class Puke extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractPower fallFromGracePower = p.getPower(FallFromAmysGracePower.POWER_ID);
+        if (fallFromGracePower != null && this.magicNumber != this.baseMagicNumber) {
+            fallFromGracePower.flash();
+        }
+
         for (int i = 0; i < BingeUtil.getPlayerBinge(true); i++) {
             this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
             this.addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, magicNumber)));
