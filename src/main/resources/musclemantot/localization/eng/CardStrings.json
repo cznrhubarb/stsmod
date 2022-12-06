@@ -152,6 +152,10 @@
     "DESCRIPTION": "Put all Bite cards from your discard pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put all Bite cards from your discard pile into your hand."
   },
+  "${modID}:BulkUp": {
+    "NAME": "Bulk Up",
+    "DESCRIPTION": "musclemantot:Purge. NL Gain 1 Strength for each musclemantot:Binge lost."
+  },
   "${modID}:Blep": {
     "NAME": "Blep",
     "DESCRIPTION": "Can only be played if no attacks have been played this turn. NL Lose 3 Strength this turn. NL ALL enemies lose !M! Strength this turn.",
@@ -167,6 +171,15 @@
       "I can't escape from a boss!",
       "I can't escape with someone behind me!"
     ]
+  },
+  "${modID}:LickWounds": {
+    "NAME": "Lick Wounds",
+    "DESCRIPTION": "Can only be played if your musclemantot:Binge is !M! or more. NL Heal !M! HP. NL Exhaust."
+  },
+  "${modID}:SlowBlink": {
+    "NAME": "Slow Blink",
+    "DESCRIPTION": "Ethereal. NL Stun. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "NL Stun. NL Exhaust."
   },
   "${modID}:Intimidate": {
     "NAME": "Intimidate",
