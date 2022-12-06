@@ -107,6 +107,10 @@
     "NAME": "Big Bite",
     "DESCRIPTION": "Costs 1 less [E] for each musclemantot:Binge you have. NL Deal !D! damage."
   },
+  "${modID}:SwallowWhole": {
+    "NAME": "Swallow Whole",
+    "DESCRIPTION": "Deal !D! damage. NL If this breaks an enemy block, gain !M! musclemantot:Binge."
+  },
   "${modID}:Regurgitate": {
     "NAME": "Regurgitate",
     "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost. NL Exhaust.",
@@ -213,6 +217,32 @@
   "${modID}:Snatch": {
     "NAME": "Snatch",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to apply a buff, gain !M! Strength."
+  },
+  "${modID}:Heave": {
+    "NAME": "Heave",
+    "DESCRIPTION": "musclemantot:Purge. NL Gain [E] for each musclemantot:Binge lost."
+  },
+  "${modID}:Retch": {
+    "NAME": "Retch",
+    "DESCRIPTION": "musclemantot:Purge. NL Apply !M! Poison for each musclemantot:Binge lost."
+  },
+  "${modID}:Gag": {
+    "NAME": "Gag",
+    "DESCRIPTION": "musclemantot:Purge. NL Draw 1 card for each musclemantot:Binge lost.",
+    "UPGRADE_DESCRIPTION": "musclemantot:Purge. NL Draw 1 card for each musclemantot:Binge lost plus 1 additional card."
+  },
+  "${modID}:Sunbathe": {
+    "NAME": "Sunbathe",
+    "DESCRIPTION": "musclemantot:Purge. NL Gain !B! Block for each musclemantot:Binge lost."
+  },
+  "${modID}:Gorge": {
+    "NAME": "Gorge",
+    "DESCRIPTION": "Draw 1 card. Gain !M! musclemantot:Binge."
+  },
+  "${modID}:Buffet": {
+    "NAME": "Buffet",
+    "DESCRIPTION": "Gain !M! musclemantot:Binge for every enemy in combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! musclemantot:Binge for every enemy in combat."
   },
   //power cards
   "${modID}:PleasantDemeanor": {
