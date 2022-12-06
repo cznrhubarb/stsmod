@@ -130,6 +130,10 @@
     "NAME": "Purr",
     "DESCRIPTION": "Gain [E]. NL Next turn gain [E]."
   },
+  "${modID}:CatNap": {
+    "NAME": "Cat Nap",
+    "DESCRIPTION": "Can only be played if your binge is less than !M!. NL Gain !B! block."
+  },
   "${modID}:SneakABite": {
     "NAME": "Sneak A Bite",
     "DESCRIPTION": "Put all Bite cards from your discard pile into your hand. NL Exhaust.",
