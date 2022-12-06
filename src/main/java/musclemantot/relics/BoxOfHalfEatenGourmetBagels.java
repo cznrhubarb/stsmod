@@ -2,6 +2,7 @@ package musclemantot.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import musclemantot.BingePurgeInterface;
 import musclemantot.characters.MuscleManTot;
@@ -24,7 +25,16 @@ public class BoxOfHalfEatenGourmetBagels extends BaseRelic implements BingePurge
         return DESCRIPTIONS[0];
     }
 
-    // TODO: How does this replace the other starter relic?
+    @Override
+    public void obtain() {
+        AbstractPlayer player = AbstractDungeon.player;
+        if (player != null && player.hasRelic(HalfEatenGourmetBagel.ID)) {
+            int index = player.relics.indexOf(player.getRelic(HalfEatenGourmetBagel.ID));
+            instantObtain(player, index, true);
+        } else {
+            super.obtain();
+        }
+    }
 
     public boolean canSpawn() {
         return AbstractDungeon.player.hasRelic(HalfEatenGourmetBagel.ID);

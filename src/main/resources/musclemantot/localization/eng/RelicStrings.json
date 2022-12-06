@@ -34,9 +34,9 @@
       "If your #ymusclemantot:Binge is over #b0 at the end of combat, heal an amount equal to your #ymusclemantot:Binge (max 10)."
     ]
   },
-  "${modID}:Prozac": {
-    "NAME": "Prozac",
-    "FLAVOR": "We've liked him a lot more ever since he started taking it.",
+  "${modID}:UnattendedLeftovers": {
+    "NAME": "Unattended Leftovers",
+    "FLAVOR": "Shouldn't 'a left those there.",
     "DESCRIPTIONS": [
       "Whenever you #ymusclemantot:Purge, its effects are increased by #b1."
     ]

@@ -233,7 +233,7 @@
   },
   "${modID}:Gorge": {
     "NAME": "Gorge",
-    "DESCRIPTION": "Draw 1 card. Gain !M! musclemantot:Binge."
+    "DESCRIPTION": "Draw 1 card. NL Gain !M! musclemantot:Binge."
   },
   "${modID}:Buffet": {
     "NAME": "Buffet",

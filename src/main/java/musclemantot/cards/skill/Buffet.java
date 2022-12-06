@@ -35,11 +35,14 @@ public class Buffet extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int count = 0;
         for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
             if (!mon.isDeadOrEscaped()) {
-                this.addToBot(new ApplyPowerAction(p, p, new BingePower(p, this.magicNumber), this.magicNumber));
+                count++;
             }
         }
+
+        this.addToBot(new ApplyPowerAction(p, p, new BingePower(p, count * this.magicNumber)));
     }
 
     @Override
