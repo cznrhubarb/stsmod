@@ -49,6 +49,20 @@ public class MuscleManTot extends CustomPlayer {
     private static final String SHOULDER_2 = characterPath("shoulder2.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
 
+    // The Orb
+    public static final String[] orbTextures = {
+            "theDefaultResources/images/char/defaultCharacter/orb/layer1.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer2.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer3.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer4.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer5.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer6.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer1d.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer2d.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer3d.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer4d.png",
+            "theDefaultResources/images/char/defaultCharacter/orb/layer5d.png",};
+
     public static class Enums {
         //These are used to identify your character, as well as your character's card color.
         //Library color is basically the same as card color, but you need both because that's how the game was made.
@@ -65,7 +79,7 @@ public class MuscleManTot extends CustomPlayer {
 
     public MuscleManTot() {
         super(NAMES[0], Enums.MUSCLE_MAN_TOT,
-                new CustomEnergyOrb(null, null, null), //Energy Orb
+                new CustomEnergyOrb(orbTextures, "theDefaultResources/images/char/defaultCharacter/orb/vfx.png", null), //Energy Orb
                 new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
 
         initializeClass(null,
