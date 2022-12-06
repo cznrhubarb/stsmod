@@ -22,7 +22,7 @@ public class CatnipBanana extends BaseRelic {
 
     public float atDamageModify(float damage, AbstractCard c) {
         if (c.hasTag(MuscleManTot.Enums.BITE)) {
-            return damage * 1.35F;
+            return c.costForTurn != 0 && (!c.freeToPlayOnce || c.cost == -1) ? damage : damage * 1.35F;
         } else {
             return damage;
         }

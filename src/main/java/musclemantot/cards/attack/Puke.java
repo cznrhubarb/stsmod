@@ -27,13 +27,13 @@ public class Puke extends BaseCard {
             2,
             CardType.ATTACK,
             CardTarget.ENEMY,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 2;
     private static final int POISON = 1;
 
@@ -46,6 +46,11 @@ public class Puke extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractPower fallFromGracePower = p.getPower(FallFromAmysGracePower.POWER_ID);
+        if (fallFromGracePower != null && this.magicNumber != this.baseMagicNumber) {
+            fallFromGracePower.flash();
+        }
+
         for (int i = 0; i < BingeUtil.getPlayerBinge(true); i++) {
             this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
             this.addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, magicNumber)));

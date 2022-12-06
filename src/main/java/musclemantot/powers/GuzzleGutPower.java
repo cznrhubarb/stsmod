@@ -33,6 +33,9 @@ public class GuzzleGutPower extends BasePower implements CloneablePowerInterface
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
+            if (strengthBonus > 0) {
+                this.owner.getPower(FallFromAmysGracePower.POWER_ID).flash();
+            }
 
             for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                 if (!m.isDead && !m.isDying) {

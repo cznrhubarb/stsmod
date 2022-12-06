@@ -27,7 +27,7 @@ public class Blep extends BaseCard {
             0,
             CardType.SKILL,
             CardTarget.ALL,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 

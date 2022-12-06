@@ -18,7 +18,7 @@ public class Snatch extends BaseCard {
             Snatch.class.getSimpleName(),
             1,
             CardType.ATTACK,
-            CardTarget.ENEMY,
+            CardTarget.SELF_AND_ENEMY,
             CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );

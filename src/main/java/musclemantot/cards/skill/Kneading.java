@@ -21,7 +21,7 @@ public class Kneading extends BaseCard {
             2,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 

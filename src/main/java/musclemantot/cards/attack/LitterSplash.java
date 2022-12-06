@@ -21,7 +21,7 @@ public class LitterSplash extends BaseCard {
             LitterSplash.class.getSimpleName(),
             2,
             CardType.ATTACK,
-            CardTarget.ALL_ENEMY,
+            CardTarget.ALL,
             CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );

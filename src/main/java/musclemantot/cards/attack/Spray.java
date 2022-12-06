@@ -19,7 +19,7 @@ public class Spray extends BaseCard {
             2,
             CardType.ATTACK,
             CardTarget.ENEMY,
-            CardRarity.COMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 

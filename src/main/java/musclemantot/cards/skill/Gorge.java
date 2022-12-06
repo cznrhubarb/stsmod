@@ -18,7 +18,7 @@ public class Gorge extends BaseCard {
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             MuscleManTot.Enums.CARD_COLOR
     );
 

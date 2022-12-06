@@ -18,7 +18,7 @@ public class Meow extends BaseCard {
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.COMMON,
+            CardRarity.RARE,
             MuscleManTot.Enums.CARD_COLOR
     );
 

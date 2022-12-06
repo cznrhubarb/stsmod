@@ -1,7 +1,9 @@
 package musclemantot.util;
 
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import musclemantot.powers.BingePower;
 import musclemantot.relics.UnattendedLeftovers;
 
@@ -13,7 +15,10 @@ public class BingeUtil {
             bingeAmount = bingePower.amount;
         }
 
-        if (isForPurge && AbstractDungeon.player.hasRelic(UnattendedLeftovers.ID)) {
+        AbstractRelic leftoversRelic = AbstractDungeon.player.getRelic(UnattendedLeftovers.ID);
+        if (isForPurge && leftoversRelic != null) {
+            leftoversRelic.flash();
+            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, leftoversRelic));
             bingeAmount += 1;
         }
 
