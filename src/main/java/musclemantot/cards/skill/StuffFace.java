@@ -24,12 +24,13 @@ public class StuffFace extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int BINGE_GAIN = 1;
+    private static final int UPG_BINGE_GAIN = 1;
 
     public StuffFace() {
         super(cardInfo);
 
         setCostUpgrade(0);
-        setMagic(BINGE_GAIN);
+        setMagic(BINGE_GAIN, UPG_BINGE_GAIN);
     }
 
     @Override

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
+import com.megacrit.cardcrawl.vfx.combat.ScrapeEffect;
 
 public class FurryFuryFlurryAction extends AbstractGameAction {
     private boolean freeToPlayOnce;
@@ -44,7 +44,7 @@ public class FurryFuryFlurryAction extends AbstractGameAction {
         if (effect > 0) {
             for(int i = 0; i < effect; ++i) {
                 if (m != null) {
-                    this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.RED, Color.WHITE), 0.1F));
+                    this.addToBot(new VFXAction(new ScrapeEffect(m.hb.cX, m.hb.cY), 0.1F));
                 }
 
                 this.addToBot(new DamageAction(this.m, new DamageInfo(this.p, this.damage, this.damageTypeForTurn), AttackEffect.NONE));

@@ -3,13 +3,16 @@ package musclemantot.cards.skill;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.vfx.combat.IntimidateEffect;
 import com.megacrit.cardcrawl.vfx.combat.ThirdEyeEffect;
 import musclemantot.cards.BaseCard;
 import musclemantot.characters.MuscleManTot;
@@ -44,9 +47,8 @@ public class Intimidate extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster mon) {
-        if (p != null) {
-            this.addToBot(new VFXAction(new ThirdEyeEffect(p.hb.cX, p.hb.cY)));
-        }
+        this.addToBot(new SFXAction("INTIMIDATE"));
+        this.addToBot(new VFXAction(p, new IntimidateEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 1.0F));
 
         this.addToBot(new ApplyPowerAction(mon, p, new StrengthPower(mon, -STRENGTH_LOSS), -STRENGTH_LOSS, true, AbstractGameAction.AttackEffect.NONE));
         this.addToBot(new ApplyPowerAction(mon, p, new VulnerablePower(mon, VULNERABLE, false), VULNERABLE, true, AbstractGameAction.AttackEffect.NONE));

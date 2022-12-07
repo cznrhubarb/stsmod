@@ -36,7 +36,7 @@ public class SwallowWhole extends BaseCard {
 
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
-    private static final int BINGE_GAIN = 1;
+    private static final int BINGE_GAIN = 2;
 
     public SwallowWhole() {
         super(cardInfo);

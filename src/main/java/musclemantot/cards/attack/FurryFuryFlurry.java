@@ -33,7 +33,6 @@ public class FurryFuryFlurry extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // TODO: There is a Claw Vfx we can use for all these
         this.addToBot(new FurryFuryFlurryAction(p, m, this.damage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
     }
 

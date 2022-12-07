@@ -1,14 +1,4 @@
 {
-  "${modID}:ExampleCard": {
-    "NAME": "Name",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "If you change the constructor of your card to use super(cardInfo, true); this will be the card's description when it is upgraded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
-  },
   //attack cards
   "${modID}:Strike_Brown": {
     "NAME": "Strike",
@@ -28,9 +18,9 @@
   },
   "${modID}:CrunchAndMunch": {
     "NAME": "Crunch and Munch",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 musclemantot:Binge for each bite played this turn.",
+    "DESCRIPTION": "Deal !D! damage and gain 1 musclemantot:Binge for each bite played this turn.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Gains !M! Binge.)"
+      " NL (Hits !M! time(s).)"
     ]
   },
   "${modID}:Kick": {
@@ -126,8 +116,8 @@
     "DESCRIPTION": "Gain !M! musclemantot:Binge."
   },
   "${modID}:TakeTheHighGround": {
-    "NAME": "Take the High Ground",
-    "DESCRIPTION": "Apply !M! Vulnerable."
+    "NAME": "The High Ground",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !M! Weak."
   },
   "${modID}:Meow": {
     "NAME": "Meow",
@@ -267,7 +257,7 @@
     "DESCRIPTION": "Gain !M! Block at the end of each turn for each musclemantot:Binge you have."
   },
   "${modID}:FallFromAmysGrace": {
-    "NAME": "Fall From Amy's Grace",
+    "NAME": "Fall From Grace",
     "DESCRIPTION": "Strength also increases amount of Poison inflicted."
   },
   "${modID}:FiveToeDiscount": {

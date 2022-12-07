@@ -26,7 +26,7 @@ public class Gorge extends BaseCard {
 
     // TODO: Could be a magic number
     private static final int CARD_DRAW = 1;
-    private static final int BINGE_GAIN = 1;
+    private static final int BINGE_GAIN = 2;
 
     public Gorge() {
         super(cardInfo);

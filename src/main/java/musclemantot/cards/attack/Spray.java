@@ -42,7 +42,7 @@ public class Spray extends BaseCard {
                     new DamageAction(
                             m,
                             new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                            AbstractGameAction.AttackEffect.SMASH)
+                            AbstractGameAction.AttackEffect.POISON)
             );
         }
     }

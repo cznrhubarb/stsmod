@@ -13,7 +13,7 @@
     ]
   },
   "${modID}:FallFromAmysGrace": {
-    "NAME": "Fall From Amy's Grace",
+    "NAME": "Fall From Grace",
     "DESCRIPTIONS": [
       "#yStrength also increases amount of #yPoison inflicted."
     ]

@@ -1,12 +1,14 @@
 package musclemantot.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.ViceCrushEffect;
 import musclemantot.powers.BingePower;
@@ -31,10 +33,10 @@ public class SwallowWholeAction extends AbstractGameAction {
         } else {
             this.tickDuration();
             if (this.isDone) {
-                AbstractDungeon.effectList.add(new ViceCrushEffect(this.target.hb.cX, this.target.hb.cY));
+                AbstractDungeon.effectList.add(new BiteEffect(this.target.hb.cX, this.target.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()));
                 boolean hadBlock = this.target.currentBlock > 0;
                 this.target.damage(this.info);
-                if (this.target.lastDamageTaken > 0 && hadBlock) {
+                if (this.target.currentBlock == 0 && hadBlock) {
                     this.addToTop(new ApplyPowerAction(this.source, this.source, new BingePower(this.source, bingeAmount)));
                 }
 

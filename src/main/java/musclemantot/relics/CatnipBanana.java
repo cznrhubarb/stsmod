@@ -9,7 +9,7 @@ public class CatnipBanana extends BaseRelic {
     private static final String NAME = CatnipBanana.class.getSimpleName();
     public static final String ID = makeID(NAME);
     private static final RelicTier RARITY = RelicTier.COMMON;
-    private static final LandingSound SOUND = LandingSound.SOLID;
+    private static final LandingSound SOUND = LandingSound.FLAT;
 
     public CatnipBanana() {
         super(ID, NAME, MuscleManTot.Enums.CARD_COLOR, RARITY, SOUND);
@@ -22,7 +22,7 @@ public class CatnipBanana extends BaseRelic {
 
     public float atDamageModify(float damage, AbstractCard c) {
         if (c.hasTag(MuscleManTot.Enums.BITE)) {
-            return c.costForTurn != 0 && (!c.freeToPlayOnce || c.cost == -1) ? damage : damage * 1.35F;
+            return damage * 1.35F;
         } else {
             return damage;
         }
