@@ -31,6 +31,7 @@ public class TakeTheHighGround extends BaseCard {
         super(cardInfo);
 
         setMagic(STAT_CHANGE, UPG_STAT_CHANGE);
+        setExhaust(true);
     }
 
     @Override

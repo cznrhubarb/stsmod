@@ -63,7 +63,7 @@ public class BigBite extends BaseCard implements BingePurgeInterface {
 
     @Override
     public void onBinge(int amount) {
-        this.updateCost(-1);
+        this.updateCost(amount);
     }
 
     @Override

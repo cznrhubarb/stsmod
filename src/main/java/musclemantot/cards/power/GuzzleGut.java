@@ -28,7 +28,7 @@ public class GuzzleGut extends BaseCard {
         super(cardInfo);
 
         setCostUpgrade(1);
-        setMagic(2);
+        setMagic(1);
     }
 
     @Override

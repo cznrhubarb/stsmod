@@ -35,7 +35,7 @@ ViciousBite extends BaseCard {
     private static final int DAMAGE = 15;
     private static final int UPG_DAMAGE = 5;
 
-    private static final int HEALTH = 5;
+    private static final int HEALTH = 2;
 
     public ViciousBite() {
         super(cardInfo);

@@ -14,7 +14,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 public class EyeOfTheTotger extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             EyeOfTheTotger.class.getSimpleName(),
-            1,
+            2,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.UNCOMMON,

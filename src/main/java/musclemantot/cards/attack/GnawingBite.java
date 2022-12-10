@@ -23,7 +23,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 public class GnawingBite extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             GnawingBite.class.getSimpleName(),
-            2,
+            1,
             CardType.ATTACK,
             CardTarget.SELF_AND_ENEMY,
             CardRarity.UNCOMMON,
@@ -32,7 +32,7 @@ public class GnawingBite extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 9;
     private static final int BINGE_GAIN = 1;
     private static final int UPG_BINGE_GAIN = 1;
 

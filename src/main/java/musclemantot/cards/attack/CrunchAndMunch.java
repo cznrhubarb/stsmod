@@ -35,25 +35,21 @@ public class CrunchAndMunch extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 3;
 
     public CrunchAndMunch() {
         super(cardInfo);
 
-        setDamage(DAMAGE);
+        setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(0);
-        setCostUpgrade(0);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
             if (m != null) {
-                if (Settings.FAST_MODE) {
-                    this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.1F));
-                } else {
-                    this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.3F));
-                }
+                this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.1F));
             }
 
             addToBot(

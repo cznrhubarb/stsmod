@@ -3,6 +3,7 @@ package musclemantot.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -15,7 +16,6 @@ import musclemantot.powers.BingePower;
 
 public class SwallowWholeAction extends AbstractGameAction {
     private DamageInfo info;
-    private int bingeAmount;
 
     public SwallowWholeAction(AbstractCreature target, DamageInfo info, int bingeAmount) {
         this.info = info;
@@ -23,7 +23,6 @@ public class SwallowWholeAction extends AbstractGameAction {
         this.actionType = AbstractGameAction.ActionType.DAMAGE;
         this.startDuration = Settings.ACTION_DUR_FAST;
         this.duration = this.startDuration;
-        this.bingeAmount = bingeAmount;
     }
 
     @Override
@@ -34,10 +33,11 @@ public class SwallowWholeAction extends AbstractGameAction {
             this.tickDuration();
             if (this.isDone) {
                 AbstractDungeon.effectList.add(new BiteEffect(this.target.hb.cX, this.target.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()));
-                boolean hadBlock = this.target.currentBlock > 0;
+                int prevBlockAmount = this.target.currentBlock;
                 this.target.damage(this.info);
-                if (this.target.currentBlock == 0 && hadBlock) {
-                    this.addToTop(new ApplyPowerAction(this.source, this.source, new BingePower(this.source, bingeAmount)));
+                int blockDiff = prevBlockAmount - this.target.currentBlock;
+                if (blockDiff > 0) {
+                    this.addToTop(new GainBlockAction(this.source, this.source, blockDiff));
                 }
 
                 if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

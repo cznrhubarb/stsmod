@@ -18,7 +18,7 @@
   },
   "${modID}:CrunchAndMunch": {
     "NAME": "Crunch and Munch",
-    "DESCRIPTION": "Deal !D! damage and gain 1 musclemantot:Binge for each bite played this turn.",
+    "DESCRIPTION": "Deal !D! damage and gain 1 musclemantot:Binge for each bite played this combat.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits !M! time(s).)"
     ]
@@ -99,7 +99,7 @@
   },
   "${modID}:SwallowWhole": {
     "NAME": "Swallow Whole",
-    "DESCRIPTION": "Deal !D! damage. NL If this breaks an enemy block, gain !M! musclemantot:Binge."
+    "DESCRIPTION": "Deal !D! damage. NL For every point of damage that is blocked, gain that much Block."
   },
   "${modID}:Regurgitate": {
     "NAME": "Regurgitate",
@@ -117,7 +117,7 @@
   },
   "${modID}:TakeTheHighGround": {
     "NAME": "The High Ground",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !M! Weak."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !M! Weak. NL Exhaust."
   },
   "${modID}:Meow": {
     "NAME": "Meow",

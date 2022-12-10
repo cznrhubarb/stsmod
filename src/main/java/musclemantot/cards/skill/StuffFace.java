@@ -35,7 +35,7 @@ public class StuffFace extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new BingePower(p, BINGE_GAIN)));
+        addToBot(new ApplyPowerAction(p, p, new BingePower(p, magicNumber)));
     }
 
     @Override

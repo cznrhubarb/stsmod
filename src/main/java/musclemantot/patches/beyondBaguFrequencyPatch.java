@@ -9,12 +9,10 @@ import musclemantot.characters.MuscleManTot;
 public class beyondBaguFrequencyPatch {
     public static void Postfix(TheBeyond __instance) {
         if (TheBeyond.player instanceof MuscleManTot) {
-            // Not sure why they put all three in and randomize instead of just giving the one they need,
-            //  but I don't want to mess anything up if there is a reason. So we keep the whole list,
-            //  put Bagu first, and don't randomize.
+            TheBeyond.bossList.clear();
             TheBeyond.bossList.add("Donu and Deca");
-            TheBeyond.bossList.add("Awakened One");
-            TheBeyond.bossList.add("Time Eater");
+            TheBeyond.bossList.add("Donu and Deca");
+            TheBeyond.bossList.add("Donu and Deca");
         }
     }
 }
