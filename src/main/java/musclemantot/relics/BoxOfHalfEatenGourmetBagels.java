@@ -41,7 +41,7 @@ public class BoxOfHalfEatenGourmetBagels extends BaseRelic implements BingePurge
     }
 
     @Override
-    public void atBattleStart() {
+    public void atTurnStart() {
         this.flash();
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BingePower(AbstractDungeon.player, 1)));
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -53,7 +53,7 @@ public class BoxOfHalfEatenGourmetBagels extends BaseRelic implements BingePurge
     @Override
     public void onPurge(int amount) {
         this.flash();
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BingePower(AbstractDungeon.player, 1)));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BingePower(AbstractDungeon.player, 2)));
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 }

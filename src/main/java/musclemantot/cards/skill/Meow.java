@@ -24,8 +24,8 @@ public class Meow extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BINGE_THRESHOLD = 2;
-    private static final int UPG_BINGE_THRESHOLD = 1;
+    private static final int BINGE_THRESHOLD = 3;
+    private static final int UPG_BINGE_THRESHOLD = 2;
     private static final int CARD_DRAW = 3;
 
     public Meow() {

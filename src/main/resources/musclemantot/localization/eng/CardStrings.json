@@ -6,7 +6,7 @@
   },
   "${modID}:Vomit": {
     "NAME": "Vomit",
-    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost."
+    "DESCRIPTION": "musclemantot:Purge. NL Deal !D! damage for each musclemantot:Binge lost. NL Exhaust."
   },
   "${modID}:Scratch": {
     "NAME": "Scratch",

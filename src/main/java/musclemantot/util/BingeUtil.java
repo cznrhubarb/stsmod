@@ -15,12 +15,12 @@ public class BingeUtil {
             bingeAmount = bingePower.amount;
         }
 
-        AbstractRelic leftoversRelic = AbstractDungeon.player.getRelic(UnattendedLeftovers.ID);
-        if (isForPurge && leftoversRelic != null) {
-            leftoversRelic.flash();
-            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, leftoversRelic));
-            bingeAmount += 1;
-        }
+//        AbstractRelic leftoversRelic = AbstractDungeon.player.getRelic(UnattendedLeftovers.ID);
+//        if (isForPurge && leftoversRelic != null) {
+//            leftoversRelic.flash();
+//            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, leftoversRelic));
+//            bingeAmount += 1;
+//        }
 
         return bingeAmount;
     }

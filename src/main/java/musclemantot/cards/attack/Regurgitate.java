@@ -23,7 +23,7 @@ public class Regurgitate extends BaseCard {
     private static final Logger logger = LogManager.getLogger(AbstractCard.class.getName());
     private final static CardInfo cardInfo = new CardInfo(
             Regurgitate.class.getSimpleName(),
-            1,
+            0,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.UNCOMMON,

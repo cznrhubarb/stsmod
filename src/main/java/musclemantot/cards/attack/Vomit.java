@@ -19,7 +19,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 public class Vomit extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             Vomit.class.getSimpleName(),
-            2,
+            1,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.BASIC,
@@ -29,7 +29,7 @@ public class Vomit extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 4;
 
     public Vomit() {
         super(cardInfo);

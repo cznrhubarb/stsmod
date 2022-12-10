@@ -18,7 +18,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 public class BulkUp extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             BulkUp.class.getSimpleName(),
-            2,
+            1,
             CardType.SKILL,
             CardTarget.SELF,
             CardRarity.UNCOMMON,
@@ -33,7 +33,7 @@ public class BulkUp extends BaseCard {
         super(cardInfo);
 
         setMagic(STRENGTH);
-        setCostUpgrade(1);
+        setCostUpgrade(0);
     }
 
     @Override

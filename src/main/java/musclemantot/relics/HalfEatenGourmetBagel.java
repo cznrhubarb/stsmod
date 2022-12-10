@@ -24,7 +24,7 @@ public class HalfEatenGourmetBagel extends BaseRelic {
     }
 
     @Override
-    public void atBattleStart() {
+    public void atTurnStart() {
         this.flash();
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BingePower(AbstractDungeon.player, 1)));
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));

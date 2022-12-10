@@ -26,8 +26,8 @@ public class Spew extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 5;
 
     public Spew() {
         super(cardInfo);

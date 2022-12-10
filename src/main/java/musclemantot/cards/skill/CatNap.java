@@ -25,8 +25,8 @@ public class CatNap extends BaseCard {
 
     private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 3;
-    private static final int BINGE_THRESHOLD = 2;
-    private static final int UPG_BINGE_THRESHOLD = 1;
+    private static final int BINGE_THRESHOLD = 3;
+    private static final int UPG_BINGE_THRESHOLD = 2;
 
     public CatNap() {
         super(cardInfo);

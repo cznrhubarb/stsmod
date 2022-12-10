@@ -24,7 +24,7 @@ import static musclemantot.MuscleManTotMod.makeID;
 public class Puke extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             Puke.class.getSimpleName(),
-            2,
+            1,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.RARE,
